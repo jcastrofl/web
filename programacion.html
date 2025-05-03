@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos de Programación | Skill's Engineer</title>
+    <!-- Preconexiones para optimización -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Estilos principales -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <!-- Librerías de animación -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
+    
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/professional.css">
+    
+    <!-- Preload de librerías JavaScript para mejor rendimiento -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" as="script">
+    <link rel="preload" href="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js" as="script">
+</head>
+<body class="programming-theme">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span>Skill's</span> Engineer
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Cursos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="ciberseguridad.html">Ciberseguridad</a></li>
+                            <li><a class="dropdown-item" href="bases-datos.html">Bases de Datos</a></li>
+                            <li><a class="dropdown-item active" href="programacion.html">Programación</a></li>
+                            <li><a class="dropdown-item" href="gestion-ti.html">Gestión de TI</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white ms-3 px-4" href="acceso.html">Acceder</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner Informativo Universidad Continental -->
+    <div class="uc-banner py-2 text-white">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-center">
+                <i class="bi bi-award me-2"></i>
+                <p class="mb-0 fw-semibold">Proyecto oficial de la <strong>Escuela de Ingeniería de la Universidad Continental</strong> - Modalidad a distancia | Disponible para todos los estudiantes de la universidad</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section con Fondo Temático -->
+    <section class="hero-video-section position-relative overflow-hidden">
+        <!-- Overlay para mejorar la legibilidad del texto -->
+        <div class="hero-overlay"></div>
+        
+        <div class="container position-relative z-index-1 py-5">
+            <div class="row min-vh-75 align-items-center">
+                <div class="col-lg-7" data-aos="fade-right">
+                    <div class="hero-content text-white">
+                        <span class="badge bg-primary mb-3 fs-6">Programación</span>
+                        <h1 class="display-3 fw-bold mb-4 text-shadow parallax-element">Construye el Futuro Digital</h1>
+                        <p class="lead mb-4 fs-4 text-shadow parallax-element">Desarrolla tus habilidades en los lenguajes y frameworks más demandados. Desde principiante hasta experto, tenemos el curso perfecto para ti.</p>
+                        <div class="d-flex flex-wrap gap-3 mt-4">
+                            <a href="#cursos" class="btn btn-primary btn-lg pulse-btn parallax-element">
+                                <i class="bi bi-code-slash me-2"></i>Explorar Cursos
+                            </a>
+                            <a href="acceso.html" class="btn btn-outline-light btn-lg parallax-element">
+                                <i class="bi bi-person-badge me-2"></i>Acceder
+                            </a>
+                        </div>
+                        
+                        <div class="mt-5 d-flex flex-wrap gap-4">
+                            <div class="d-flex align-items-center">
+                                <div class="icon-circle bg-primary text-white me-2">
+                                    <i class="bi bi-laptop-code"></i>
+                                </div>
+                                <span class="text-light">20+ Cursos Especializados</span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="icon-circle bg-primary text-white me-2">
+                                    <i class="bi bi-people"></i>
+                                </div>
+                                <span class="text-light">+8,000 Estudiantes</span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="icon-circle bg-primary text-white me-2">
+                                    <i class="bi bi-stack"></i>
+                                </div>
+                                <span class="text-light">Aprendizaje Práctico con Proyectos</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 d-none d-lg-block" data-aos="fade-left">
+                    <div class="hero-card bg-dark bg-opacity-75 p-4 rounded-3 border border-primary border-opacity-50 shadow-lg">
+                        <h3 class="text-white mb-3">¿Por qué estudiar Programación?</h3>
+                        <ul class="list-unstyled mb-0">
+                            <li class="d-flex align-items-center mb-3 text-white">
+                                <i class="bi bi-check-circle-fill text-success me-2 fs-5"></i>
+                                <span>Las habilidades más demandadas del mercado</span>
+                            </li>
+                            <li class="d-flex align-items-center mb-3 text-white">
+                                <i class="bi bi-check-circle-fill text-success me-2 fs-5"></i>
+                                <span>Salarios competitivos desde el inicio</span>
+                            </li>
+                            <li class="d-flex align-items-center mb-3 text-white">
+                                <i class="bi bi-check-circle-fill text-success me-2 fs-5"></i>
+                                <span>Trabajo remoto y flexibilidad laboral</span>
+                            </li>
+                            <li class="d-flex align-items-center text-white">
+                                <i class="bi bi-check-circle-fill text-success me-2 fs-5"></i>
+                                <span>Oportunidades globales de empleo</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Título y descripción de la sección -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center" data-aos="fade-up">
+                    <h1 class="fw-bold mb-4 display-4 text-primary">Cursos de Programación</h1>
+                    <p class="lead mb-5">En Skill's Engineer ofrecemos cursos especializados en diferentes lenguajes de programación y frameworks para ayudarte a convertirte en un desarrollador completo. Nuestros cursos son impartidos por profesionales de la industria con amplia experiencia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cursos destacados -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="fw-bold mb-5 text-center" data-aos="fade-up">Cursos Destacados</h2>
+            
+            <!-- Course Filters -->
+            <div class="course-filter-container" data-aos="fade-up" data-aos-delay="100">
+                <button class="btn btn-outline-primary course-filter-btn active" data-filter="all">Todos</button>
+                <button class="btn btn-outline-primary course-filter-btn" data-filter="principiante">Principiante</button>
+                <button class="btn btn-outline-primary course-filter-btn" data-filter="intermedio">Intermedio</button>
+                <button class="btn btn-outline-primary course-filter-btn" data-filter="avanzado">Avanzado</button>
+                <button class="btn btn-outline-primary course-filter-btn" data-filter="certificacion">Certificación</button>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Curso 1 -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="row g-0">
+                            <div class="col-md-4 position-relative">
+                                <img src="img/curso-python.jpg" class="img-fluid rounded-start h-100" alt="Curso de Python">
+                                <button class="btn btn-sm btn-primary video-btn position-absolute" data-bs-toggle="modal" data-bs-target="#videoModal1">
+                                    <i class="bi bi-play-circle-fill me-1"></i> Ver
+                                </button>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <span class="badge bg-primary course-badge">Principiante</span>
+                                    <h3 class="card-title h5 fw-bold">Python desde Cero</h3>
+                                    <p class="card-text">Aprende los fundamentos de Python, uno de los lenguajes más versátiles y demandados en el mercado laboral actual.</p>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="text-warning me-2">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-half"></i>
+                                        </div>
+                                        <span class="text-muted small">(167 reseñas)</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="text-muted"><i class="bi bi-clock me-1"></i> 10 semanas</span>
+                                        <a href="curso-modulos.html" class="btn btn-outline-primary">Ver detalles</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Curso 2 -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="row g-0">
+                            <div class="col-md-4 position-relative">
+                                <img src="img/curso-javascript.jpg" class="img-fluid rounded-start h-100" alt="Curso de JavaScript">
+                                <button class="btn btn-sm btn-primary video-btn position-absolute" data-bs-toggle="modal" data-bs-target="#videoModal2">
+                                    <i class="bi bi-play-circle-fill me-1"></i> Ver
+                                </button>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <span class="badge bg-success course-badge">Intermedio</span>
+                                    <h3 class="card-title h5 fw-bold">JavaScript & Frameworks</h3>
+                                    <p class="card-text">Domina JavaScript y los frameworks más populares como React, Vue y Angular para desarrollo frontend moderno.</p>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="text-warning me-2">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star"></i>
+                                        </div>
+                                        <span class="text-muted small">(142 reseñas)</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="text-muted"><i class="bi bi-clock me-1"></i> 12 semanas</span>
+                                        <a href="curso-detalle.html" class="btn btn-outline-primary">Ver detalles</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Curso 3 -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="row g-0">
+                            <div class="col-md-4 position-relative">
+                                <img src="img/curso-java.jpg" class="img-fluid rounded-start h-100" alt="Curso de Java">
+                                <button class="btn btn-sm btn-primary video-btn position-absolute" data-bs-toggle="modal" data-bs-target="#videoModal3">
+                                    <i class="bi bi-play-circle-fill me-1"></i> Ver
+                                </button>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <span class="badge bg-success course-badge">Intermedio</span>
+                                    <h3 class="card-title h5 fw-bold">Java para Desarrollo de Aplicaciones</h3>
+                                    <p class="card-text">Aprende Java y desarrollo de aplicaciones empresariales con Spring Boot, APIs REST y microservicios.</p>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="text-warning me-2">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-half"></i>
+                                        </div>
+                                        <span class="text-muted small">(128 reseñas)</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="text-muted"><i class="bi bi-clock me-1"></i> 14 semanas</span>
+                                        <a href="curso-detalle.html" class="btn btn-outline-primary">Ver detalles</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Curso 4 -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="row g-0">
+                            <div class="col-md-4 position-relative">
+                                <img src="img/curso-php-laravel.jpg" class="img-fluid rounded-start h-100" alt="Curso de PHP y Laravel">
+                                <button class="btn btn-sm btn-primary video-btn position-absolute" data-bs-toggle="modal" data-bs-target="#videoModal4">
+                                    <i class="bi bi-play-circle-fill me-1"></i> Ver
+                                </button>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <span class="badge bg-success course-badge">Intermedio</span>
+                                    <h3 class="card-title h5 fw-bold">PHP & Laravel</h3>
+                                    <p class="card-text">Aprende el desarrollo web backend con PHP y el framework Laravel. Crea APIs RESTful y aplicaciones web dinámicas.</p>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="text-warning me-2">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-half"></i>
+                                        </div>
+                                        <span class="text-muted small">(104 reseñas)</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="text-muted"><i class="bi bi-clock me-1"></i> 12 semanas</span>
+                                        <a href="curso-detalle.html" class="btn btn-outline-primary">Ver detalles</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Curso 5 -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="row g-0">
+                            <div class="col-md-4 position-relative">
+                                <img src="img/curso-fullstack.jpg" class="img-fluid rounded-start h-100" alt="Desarrollo Full Stack">
+                                <button class="btn btn-sm btn-primary video-btn position-absolute" data-bs-toggle="modal" data-bs-target="#videoModal5">
+                                    <i class="bi bi-play-circle-fill me-1"></i> Ver
+                                </button>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <span class="badge bg-danger course-badge">Avanzado</span>
+                                    <h3 class="card-title h5 fw-bold">Desarrollo Full Stack</h3>
+                                    <p class="card-text">Conviértete en un desarrollador Full Stack con MERN (MongoDB, Express, React y Node.js) y despliegue en la nube.</p>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="text-warning me-2">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star"></i>
+                                        </div>
+                                        <span class="text-muted small">(89 reseñas)</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="text-muted"><i class="bi bi-clock me-1"></i> 16 semanas</span>
+                                        <a href="curso-detalle.html" class="btn btn-outline-primary">Ver detalles</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Curso 6 -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="600">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="row g-0">
+                            <div class="col-md-4 position-relative">
+                                <img src="img/curso-mobile.jpg" class="img-fluid rounded-start h-100" alt="Desarrollo Móvil">
+                                <button class="btn btn-sm btn-primary video-btn position-absolute" data-bs-toggle="modal" data-bs-target="#videoModal6">
+                                    <i class="bi bi-play-circle-fill me-1"></i> Ver
+                                </button>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <span class="badge bg-danger course-badge">Avanzado</span>
+                                    <h3 class="card-title h5 fw-bold">Desarrollo de Aplicaciones Móviles</h3>
+                                    <p class="card-text">Desarrolla aplicaciones móviles multiplataforma con Flutter y React Native. Publica tus apps en Google Play y App Store.</p>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="text-warning me-2">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star"></i>
+                                        </div>
+                                        <span class="text-muted small">(75 reseñas)</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="text-muted"><i class="bi bi-clock me-1"></i> 14 semanas</span>
+                                        <a href="curso-detalle.html" class="btn btn-outline-primary">Ver detalles</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="fw-bold mb-5 text-center" data-aos="fade-up">Lo que dicen nuestros estudiantes</h2>
+            
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="testimonial-slider">
+                        <!-- Testimonio 1 -->
+                        <div class="p-4 bg-light rounded-3 shadow-sm mb-4" data-aos="fade-up" data-aos-delay="100">
+                            <div class="d-flex">
+                                <div class="me-3">
+                                    <img src="img/estudiante1.jpg" alt="Estudiante" class="rounded-circle" width="60" height="60">
+                                </div>
+                                <div>
+                                    <h5 class="mb-1 fw-bold">Ana Martínez</h5>
+                                    <p class="text-muted small mb-3">Estudiante de Python Fundamentals</p>
+                                    <div class="mb-2">
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                    </div>
+                                    <p class="mb-0">"Los cursos de programación de Skill's Engineer han sido fundamentales para mi desarrollo profesional. Los proyectos prácticos me ayudaron a construir un portafolio impresionante que me abrió puertas en la industria tech."</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Testimonio 2 -->
+                        <div class="p-4 bg-light rounded-3 shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                            <div class="d-flex">
+                                <div class="me-3">
+                                    <img src="img/estudiante2.jpg" alt="Estudiante" class="rounded-circle" width="60" height="60">
+                                </div>
+                                <div>
+                                    <h5 class="mb-1 fw-bold">Carlos Rodriguez</h5>
+                                    <p class="text-muted small mb-3">Estudiante de JavaScript Moderno</p>
+                                    <div class="mb-2">
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-half text-warning"></i>
+                                    </div>
+                                    <p class="mb-0">"La metodología de enseñanza en Skill's Engineer es excepcional. Los instructores están siempre disponibles para resolver dudas y el contenido está actualizado con las últimas tendencias en programación web."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call-to-Action -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+                    <h2 class="fw-bold mb-4">¿Listo para impulsar tu carrera en programación?</h2>
+                    <p class="lead mb-4">Únete a nuestra comunidad de más de 5,000 estudiantes que están transformando su futuro profesional con nuestros cursos especializados.</p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="acceso.html" class="btn btn-light btn-lg">Inscribirse</a>
+                        <a href="contacto.html" class="btn btn-outline-light btn-lg">Más información</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="fw-bold mb-5 text-center" data-aos="fade-up">Preguntas frecuentes</h2>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="accordionFAQs">
+                        <!-- Pregunta 1 -->
+                        <div class="accordion-item mb-3 shadow-sm" data-aos="fade-up" data-aos-delay="100">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    ¿Se requiere experiencia previa en programación?
+                                </button>
+                            </h3>
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionFAQs">
+                                <div class="accordion-body">
+                                    Depende del curso. Algunos de nuestros cursos están diseñados para principiantes absolutos, mientras que otros requieren conocimientos básicos. En la descripción de cada curso se especifica el nivel requerido. Para principiantes recomendamos nuestros cursos de fundamentos que no requieren experiencia previa.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Pregunta 2 -->
+                        <div class="accordion-item mb-3 shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    ¿Cómo funcionan las clases y el acceso al material?
+                                </button>
+                            </h3>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFAQs">
+                                <div class="accordion-body">
+                                    Todas nuestras clases son en formato video bajo demanda, lo que significa que puedes estudiar a tu propio ritmo. Una vez inscrito, tendrás acceso al material del curso durante 12 meses. Además, recibirás acceso a nuestra comunidad de Discord donde podrás interactuar con instructores y otros estudiantes.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Pregunta 3 -->
+                        <div class="accordion-item mb-3 shadow-sm" data-aos="fade-up" data-aos-delay="300">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    ¿Los certificados tienen validez profesional?
+                                </button>
+                            </h3>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFAQs">
+                                <div class="accordion-body">
+                                    Sí, nuestros certificados están respaldados por la Universidad Continental y son reconocidos en el ámbito profesional. Además, nuestros cursos están diseñados en colaboración con empresas líderes del sector tecnológico, lo que garantiza que el contenido sea relevante para el mercado laboral actual.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="mb-4"><span class="fw-bold">Skill's</span> Engineer</h5>
+                    <p class="mb-3">Una iniciativa de la Escuela de Ingeniería de la modalidad a distancia, formando profesionales en tecnología con los conocimientos más actualizados y relevantes para el mercado laboral actual.</p>
+                    <p class="fw-bold mb-3">Proyecto oficial de la <strong>Escuela de Ingeniería de la Universidad Continental</strong> - Modalidad a distancia, disponible para todos los estudiantes universitarios.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white me-2"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="mb-4">Enlaces rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white text-decoration-none">Inicio</a></li>
+                        <li class="mb-2"><a href="cursos.html" class="text-white text-decoration-none">Cursos</a></li>
+                        <li class="mb-2"><a href="nosotros.html" class="text-white text-decoration-none">Nosotros</a></li>
+                        <li class="mb-2"><a href="contacto.html" class="text-white text-decoration-none">Contacto</a></li>
+                        <li><a href="blog.html" class="text-white text-decoration-none">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="mb-4">Áreas</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="ciberseguridad.html" class="text-white text-decoration-none">Ciberseguridad</a></li>
+                        <li class="mb-2"><a href="bases-datos.html" class="text-white text-decoration-none">Bases de Datos</a></li>
+                        <li class="mb-2"><a href="programacion.html" class="text-white text-decoration-none">Programación</a></li>
+                        <li><a href="gestion-ti.html" class="text-white text-decoration-none">Gestión de TI</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="mb-4">Contacto</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-geo-alt me-2"></i> Campus Universitario, Edificio de Tecnología</li>
+                        <li class="mb-2"><i class="bi bi-envelope me-2"></i> contacto@skillsengineer.edu</li>
+                        <li class="mb-2"><i class="bi bi-telephone me-2"></i> +123 456 7890</li>
+                        <li><i class="bi bi-clock me-2"></i> Lun - Vie: 8:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2023 <span class="fw-bold">Skill's Engineer</span>. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="btn btn-primary back-to-top" role="button"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/professional.js"></script>
+</body>
+</html> 

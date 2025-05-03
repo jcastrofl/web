@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos de Ciberseguridad | Skill's Engineer</title>
+    <!-- Preconexiones para optimización -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Estilos principales -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <!-- Librerías de animación -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
+    
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/professional.css">
+    
+    <!-- Preload de librerías JavaScript para mejor rendimiento -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" as="script">
+    <link rel="preload" href="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js" as="script">
+</head>
+<body class="cybersecurity-theme">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span>Skill's</span> Engineer
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Cursos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item active" href="ciberseguridad.html">Ciberseguridad</a></li>
+                            <li><a class="dropdown-item" href="bases-datos.html">Bases de Datos</a></li>
+                            <li><a class="dropdown-item" href="programacion.html">Programación</a></li>
+                            <li><a class="dropdown-item" href="gestion-ti.html">Gestión de TI</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white ms-3 px-4" href="acceso.html">Acceder</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner Informativo Universidad Continental -->
+    <div class="uc-banner py-2 text-white">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-center">
+                <img src="https://continua.edu.pe/wp-content/uploads/2024/12/LOGO-01-1.png" alt="Logo Universidad Continental" class="me-3" height="40">
+                <p class="mb-0 fw-semibold">Proyecto oficial de la <strong>Escuela de Ingeniería de la Universidad Continental</strong> - Modalidad a distancia | Disponible para todos los estudiantes de la universidad</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section con Fondo Temático -->
+    <section class="hero-video-section position-relative overflow-hidden">
+        <!-- Overlay para mejorar la legibilidad del texto -->
+        <div class="hero-overlay"></div>
+        
+        <div class="container position-relative z-index-1 py-5">
+            <div class="row min-vh-75 align-items-center">
+                <div class="col-lg-7" data-aos="fade-right">
+                    <div class="hero-content text-white">
+                        <span class="badge bg-primary mb-3 fs-6">Ciberseguridad</span>
+                        <h1 class="display-3 fw-bold mb-4 text-shadow parallax-element">Protege tu Futuro Digital</h1>
+                        <p class="lead mb-4 fs-4 text-shadow parallax-element">Conviértete en un experto capaz de proteger sistemas y datos frente a las ciberamenazas. Especialízate en el campo profesional con mayor demanda y crecimiento.</p>
+                        <div class="d-flex flex-wrap gap-3 mt-4">
+                            <a href="#cursos" class="btn btn-primary btn-lg pulse-btn parallax-element">
+                                <i class="bi bi-shield-lock me-2"></i>Explorar Cursos
+                            </a>
+                            <a href="acceso.html" class="btn btn-outline-light btn-lg parallax-element">
+                                <i class="bi bi-person-badge me-2"></i>Acceder
+                            </a>
+                        </div>
+                        
+                        <div class="mt-5 d-flex flex-wrap gap-4">
+                            <div class="d-flex align-items-center">
+                                <div class="icon-circle bg-primary text-white me-2">
+                                    <i class="bi bi-shield-check"></i>
+                                </div>
+                                <span class="text-light">15+ Cursos Especializados</span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="icon-circle bg-primary text-white me-2">
+                                    <i class="bi bi-people"></i>
+                                </div>
+                                <span class="text-light">+5,000 Estudiantes</span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="icon-circle bg-primary text-white me-2">
+                                    <i class="bi bi-stars"></i>
+                                </div>
+                                <span class="text-light">Certificaciones Reconocidas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 d-none d-lg-block" data-aos="fade-left">
+                    <div class="hero-card bg-dark bg-opacity-75 p-4 rounded-3 border border-primary border-opacity-50 shadow-lg">
+                        <h3 class="text-white mb-3">¿Por qué Ciberseguridad?</h3>
+                        <ul class="list-unstyled mb-0">
+                            <li class="d-flex align-items-center mb-3 text-white">
+                                <i class="bi bi-check-circle-fill text-success me-2 fs-5"></i>
+                                <span>Alta demanda laboral mundial</span>
+                            </li>
+                            <li class="d-flex align-items-center mb-3 text-white">
+                                <i class="bi bi-check-circle-fill text-success me-2 fs-5"></i>
+                                <span>Salarios superiores al promedio</span>
+                            </li>
+                            <li class="d-flex align-items-center mb-3 text-white">
+                                <i class="bi bi-check-circle-fill text-success me-2 fs-5"></i>
+                                <span>Escasez de profesionales cualificados</span>
+                            </li>
+                            <li class="d-flex align-items-center text-white">
+                                <i class="bi bi-check-circle-fill text-success me-2 fs-5"></i>
+                                <span>Rol crítico en todas las organizaciones</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="fw-bold mb-4" data-aos="fade-up">¿Por qué estudiar Ciberseguridad?</h2>
+                    <p class="lead text-muted mb-4" data-aos="fade-up" data-aos-delay="100">La ciberseguridad es uno de los campos con mayor demanda en el mercado tecnológico actual. Con el aumento de ataques informáticos y brechas de seguridad, las organizaciones buscan profesionales capacitados para proteger sus sistemas y datos.</p>
+                    <div class="row g-4 mt-3">
+                        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                            <div class="card h-100 border-0 shadow-sm hover-card">
+                                <div class="card-body text-center p-4">
+                                    <div class="feature-icon bg-primary text-white rounded-circle mx-auto mb-4">
+                                        <i class="bi bi-bar-chart-fill"></i>
+                                    </div>
+                                    <h3 class="h5 fw-bold">Alta demanda laboral</h3>
+                                    <p class="text-muted mb-0">La demanda de profesionales de ciberseguridad supera a la oferta disponible.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                            <div class="card h-100 border-0 shadow-sm hover-card">
+                                <div class="card-body text-center p-4">
+                                    <div class="feature-icon bg-primary text-white rounded-circle mx-auto mb-4">
+                                        <i class="bi bi-cash-stack"></i>
+                                    </div>
+                                    <h3 class="h5 fw-bold">Salarios competitivos</h3>
+                                    <p class="text-muted mb-0">Los especialistas en seguridad informática reciben remuneraciones por encima del promedio.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                            <div class="card h-100 border-0 shadow-sm hover-card">
+                                <div class="card-body text-center p-4">
+                                    <div class="feature-icon bg-primary text-white rounded-circle mx-auto mb-4">
+                                        <i class="bi bi-graph-up-arrow"></i>
+                                    </div>
+                                    <h3 class="h5 fw-bold">Crecimiento continuo</h3>
+                                    <p class="text-muted mb-0">El campo de la ciberseguridad evoluciona constantemente, ofreciendo desarrollo profesional.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="cursos" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="fw-bold text-center mb-5" data-aos="fade-up">Nuestros Cursos de Ciberseguridad</h2>
+            
+            <!-- Course Filters -->
+            <div class="course-filter-container" data-aos="fade-up" data-aos-delay="100">
+                <button class="btn btn-outline-primary course-filter-btn active" data-filter="all">Todos</button>
+                <button class="btn btn-outline-primary course-filter-btn" data-filter="principiante">Principiante</button>
+                <button class="btn btn-outline-primary course-filter-btn" data-filter="intermedio">Intermedio</button>
+                <button class="btn btn-outline-primary course-filter-btn" data-filter="avanzado">Avanzado</button>
+                <button class="btn btn-outline-primary course-filter-btn" data-filter="certificacion">Certificación</button>
+            </div>
+            
+            <!-- Course Cards -->
+            <div class="row g-4">
+                <!-- Course 1 -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="row g-0">
+                            <div class="col-md-4 position-relative">
+                                <img src="img/curso-fundamentos-seguridad.jpg" class="img-fluid rounded-start h-100" alt="Fundamentos de Seguridad Informática">
+                                <button class="btn btn-sm btn-primary video-btn position-absolute" data-bs-toggle="modal" data-bs-target="#videoModal1">
+                                    <i class="bi bi-play-circle-fill me-1"></i> Ver
+                                </button>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <span class="badge bg-primary course-badge">Principiante</span>
+                                    <h3 class="card-title h5 fw-bold">Fundamentos de Seguridad Informática</h3>
+                                    <p class="card-text">Conoce los conceptos básicos de seguridad, tipos de amenazas y controles de seguridad fundamentales.</p>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="text-warning me-2">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-half"></i>
+                                        </div>
+                                        <span class="text-muted small">(145 reseñas)</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="text-muted"><i class="bi bi-clock me-1"></i> 8 semanas</span>
+                                        <a href="curso-modulos.html" class="btn btn-outline-primary">Ver detalles</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 2 -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="row g-0">
+                            <div class="col-md-4 position-relative">
+                                <img src="img/curso-ethical-hacking.jpg" class="img-fluid rounded-start h-100" alt="Ethical Hacking">
+                                <button class="btn btn-sm btn-primary video-btn position-absolute" data-bs-toggle="modal" data-bs-target="#videoModal2">
+                                    <i class="bi bi-play-circle-fill me-1"></i> Ver
+                                </button>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <span class="badge bg-success course-badge">Intermedio</span>
+                                    <h3 class="card-title h5 fw-bold">Ethical Hacking y Pentesting</h3>
+                                    <p class="card-text">Aprende a identificar y explotar vulnerabilidades de forma ética, utilizando las mismas técnicas que los hackers.</p>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="text-warning me-2">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star"></i>
+                                        </div>
+                                        <span class="text-muted small">(168 reseñas)</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="text-muted"><i class="bi bi-clock me-1"></i> 10 semanas</span>
+                                        <a href="curso-detalle.html" class="btn btn-outline-primary">Ver detalles</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 3 -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="row g-0">
+                            <div class="col-md-4 position-relative">
+                                <img src="img/curso-forense-digital.jpg" class="img-fluid rounded-start h-100" alt="Análisis Forense Digital">
+                                <button class="btn btn-sm btn-primary video-btn position-absolute" data-bs-toggle="modal" data-bs-target="#videoModal3">
+                                    <i class="bi bi-play-circle-fill me-1"></i> Ver
+                                </button>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <span class="badge bg-success course-badge">Intermedio</span>
+                                    <h3 class="card-title h5 fw-bold">Análisis Forense Digital</h3>
+                                    <p class="card-text">Técnicas y metodologías para la investigación de incidentes de seguridad y análisis de evidencia digital.</p>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="text-warning me-2">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-half"></i>
+                                        </div>
+                                        <span class="text-muted small">(112 reseñas)</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="text-muted"><i class="bi bi-clock me-1"></i> 11 semanas</span>
+                                        <a href="curso-detalle.html" class="btn btn-outline-primary">Ver detalles</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 4 -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="row g-0">
+                            <div class="col-md-4 position-relative">
+                                <img src="img/curso-seguridad-redes.jpg" class="img-fluid rounded-start h-100" alt="Seguridad en Redes">
+                                <button class="btn btn-sm btn-primary video-btn position-absolute" data-bs-toggle="modal" data-bs-target="#videoModal4">
+                                    <i class="bi bi-play-circle-fill me-1"></i> Ver
+                                </button>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <span class="badge bg-success course-badge">Intermedio</span>
+                                    <h3 class="card-title h5 fw-bold">Seguridad en Redes</h3>
+                                    <p class="card-text">Implementación y gestión de firewalls, IDS/IPS, VPNs y monitoreo de seguridad en redes corporativas.</p>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="text-warning me-2">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star"></i>
+                                        </div>
+                                        <span class="text-muted small">(93 reseñas)</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="text-muted"><i class="bi bi-clock me-1"></i> 10 semanas</span>
+                                        <a href="curso-detalle.html" class="btn btn-outline-primary">Ver detalles</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 5 -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="row g-0">
+                            <div class="col-md-4 position-relative">
+                                <img src="img/curso-malware-analysis.jpg" class="img-fluid rounded-start h-100" alt="Análisis de Malware">
+                                <button class="btn btn-sm btn-primary video-btn position-absolute" data-bs-toggle="modal" data-bs-target="#videoModal5">
+                                    <i class="bi bi-play-circle-fill me-1"></i> Ver
+                                </button>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <span class="badge bg-danger course-badge">Avanzado</span>
+                                    <h3 class="card-title h5 fw-bold">Análisis de Malware</h3>
+                                    <p class="card-text">Técnicas avanzadas de análisis de malware, ingeniería inversa y estudio de métodos de infección y persistencia.</p>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="text-warning me-2">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-half"></i>
+                                        </div>
+                                        <span class="text-muted small">(78 reseñas)</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="text-muted"><i class="bi bi-clock me-1"></i> 12 semanas</span>
+                                        <a href="curso-detalle.html" class="btn btn-outline-primary">Ver detalles</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 6 -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="600">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="row g-0">
+                            <div class="col-md-4 position-relative">
+                                <img src="img/curso-cissp.jpg" class="img-fluid rounded-start h-100" alt="Preparación CISSP">
+                                <button class="btn btn-sm btn-primary video-btn position-absolute" data-bs-toggle="modal" data-bs-target="#videoModal6">
+                                    <i class="bi bi-play-circle-fill me-1"></i> Ver
+                                </button>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <span class="badge bg-info course-badge">Certificación</span>
+                                    <h3 class="card-title h5 fw-bold">Preparación para CISSP</h3>
+                                    <p class="card-text">Preparación completa para la certificación CISSP, cubriendo los 8 dominios del CBK (Common Body of Knowledge).</p>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="text-warning me-2">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star"></i>
+                                        </div>
+                                        <span class="text-muted small">(120 reseñas)</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="text-muted"><i class="bi bi-clock me-1"></i> 16 semanas</span>
+                                        <a href="curso-detalle.html" class="btn btn-outline-primary">Ver detalles</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pagination -->
+            <nav aria-label="Paginación de cursos" class="mt-5">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Siguiente</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Career Paths Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4">Trayectorias profesionales en Ciberseguridad</h2>
+                    <p class="mb-4">Con nuestros cursos de ciberseguridad podrás desempeñarte en diversos roles dentro del campo de la seguridad informática:</p>
+                    
+                    <div class="accordion" id="careerAccordion">
+                        <div class="accordion-item border-0 mb-3 shadow-sm">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <i class="bi bi-shield-lock me-2"></i> Analista de Seguridad
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#careerAccordion">
+                                <div class="accordion-body">
+                                    Monitoriza los sistemas en busca de vulnerabilidades y responde a incidentes de seguridad. Implementa controles de seguridad y realiza evaluaciones de riesgo.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 mb-3 shadow-sm">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <i class="bi bi-bug me-2"></i> Pentester
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#careerAccordion">
+                                <div class="accordion-body">
+                                    Realiza pruebas de penetración en sistemas y redes para identificar vulnerabilidades antes de que los atacantes las aprovechen. Elabora informes detallados con recomendaciones.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 mb-3 shadow-sm">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <i class="bi bi-person-badge me-2"></i> Forense Digital
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#careerAccordion">
+                                <div class="accordion-body">
+                                    Investiga incidentes de seguridad, recupera y analiza evidencia digital. Trabaja con organismos legales y desarrolla metodologías de investigación.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 mb-3 shadow-sm">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    <i class="bi bi-people me-2"></i> Director de Seguridad de la Información (CISO)
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#careerAccordion">
+                                <div class="accordion-body">
+                                    Supervisa la estrategia general de seguridad de la información de una organización. Gestiona recursos, políticas y cumplimiento normativo.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <img src="img/cybersecurity-career.svg" alt="Trayectorias profesionales en Ciberseguridad" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+                    <h2 class="fw-bold mb-4">¿Listo para impulsar tu carrera en Ciberseguridad?</h2>
+                    <p class="lead mb-4">Únete a nuestra comunidad de expertos en seguridad informática y protege a las organizaciones de las amenazas digitales.</p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="acceso.html" class="btn btn-light btn-lg">Inscribirse</a>
+                        <a href="contacto.html" class="btn btn-outline-light btn-lg">Más información</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Access Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+                    <h2 class="fw-bold mb-4">Acceso de Demostración</h2>
+                    <p class="lead mb-5">Prueba nuestra plataforma con las siguientes credenciales para explorar nuestros cursos de Ciberseguridad:</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="me-3 bg-primary p-3 rounded-circle text-white">
+                                    <i class="bi bi-person-fill fs-4"></i>
+                                </div>
+                                <div>
+                                    <h3 class="h5 fw-bold mb-0">Credenciales de prueba</h3>
+                                    <p class="text-muted mb-0">Acceso a nuestra plataforma de aprendizaje</p>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="demoUser" class="form-label fw-semibold">Usuario</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="demoUser" value="demo@skillsengineer.edu" readonly>
+                                    <button class="btn btn-outline-secondary" type="button" id="copyUser" data-bs-toggle="tooltip" title="Copiar"><i class="bi bi-clipboard"></i></button>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="demoPass" class="form-label fw-semibold">Contraseña</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="demoPass" value="Demo2023*" readonly>
+                                    <button class="btn btn-outline-secondary" type="button" id="copyPass" data-bs-toggle="tooltip" title="Copiar"><i class="bi bi-clipboard"></i></button>
+                                </div>
+                            </div>
+                            <div class="d-grid">
+                                <a href="acceso.html" class="btn btn-primary">Ir a la página de acceso</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="mb-4"><span class="fw-bold">Skill's</span> Engineer</h5>
+                    <p class="mb-3">Una iniciativa de la Escuela de Ingeniería de la modalidad a distancia, formando profesionales en tecnología con los conocimientos más actualizados y relevantes para el mercado laboral actual.</p>
+                    <p class="fw-bold mb-3">Proyecto oficial de la <strong>Escuela de Ingeniería de la Universidad Continental</strong> - Modalidad a distancia, disponible para todos los estudiantes universitarios.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white me-2"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="mb-4">Enlaces rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white text-decoration-none">Inicio</a></li>
+                        <li class="mb-2"><a href="cursos.html" class="text-white text-decoration-none">Cursos</a></li>
+                        <li class="mb-2"><a href="nosotros.html" class="text-white text-decoration-none">Nosotros</a></li>
+                        <li class="mb-2"><a href="contacto.html" class="text-white text-decoration-none">Contacto</a></li>
+                        <li><a href="blog.html" class="text-white text-decoration-none">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="mb-4">Áreas</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="ciberseguridad.html" class="text-white text-decoration-none">Ciberseguridad</a></li>
+                        <li class="mb-2"><a href="bases-datos.html" class="text-white text-decoration-none">Bases de Datos</a></li>
+                        <li class="mb-2"><a href="programacion.html" class="text-white text-decoration-none">Programación</a></li>
+                        <li><a href="gestion-ti.html" class="text-white text-decoration-none">Gestión de TI</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="mb-4">Contacto</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-geo-alt me-2"></i> Campus Universitario, Edificio de Tecnología</li>
+                        <li class="mb-2"><i class="bi bi-envelope me-2"></i> contacto@skillsengineer.edu</li>
+                        <li class="mb-2"><i class="bi bi-telephone me-2"></i> +123 456 7890</li>
+                        <li><i class="bi bi-clock me-2"></i> Lun - Vie: 8:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2023 <span class="fw-bold">Skill's Engineer</span>. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="btn btn-primary back-to-top" role="button"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+    
+    <script>
+        // Inicializar AOS (Animaciones al hacer scroll)
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+</body>
+</html> 

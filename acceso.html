@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso a Estudiantes | Skill's Engineer</title>
+    <!-- Preconexiones para optimización -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Estilos principales -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <!-- Librerías de animación -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
+    
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/professional.css">
+    
+    <!-- Preload de librerías JavaScript para mejor rendimiento -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" as="script">
+    <link rel="preload" href="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js" as="script">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span>Skill's</span> Engineer
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Cursos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="ciberseguridad.html">Ciberseguridad</a></li>
+                            <li><a class="dropdown-item" href="bases-datos.html">Bases de Datos</a></li>
+                            <li><a class="dropdown-item" href="programacion.html">Programación</a></li>
+                            <li><a class="dropdown-item" href="gestion-ti.html">Gestión de TI</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active btn btn-primary text-white ms-3 px-4" href="acceso.html">Acceder</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner Informativo Universidad Continental -->
+    <div class="uc-banner py-2 text-white">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-center">
+                <i class="bi bi-award me-2"></i>
+                <p class="mb-0 fw-semibold">Proyecto oficial de la <strong>Escuela de Ingeniería de la Universidad Continental</strong> - Modalidad a distancia | Disponible para todos los estudiantes de la universidad</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Section -->
+    <section class="form-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <div class="form-card bg-white">
+                        <div class="text-center mb-4">
+                            <h2 class="fw-bold">Acceso a Estudiantes</h2>
+                            <p class="text-muted">Ingresa a tu cuenta para acceder a los cursos</p>
+                        </div>
+                        
+                        <!-- Login Tabs -->
+                        <ul class="nav nav-tabs nav-justified mb-4" id="loginTabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab" aria-controls="login" aria-selected="true">Iniciar Sesión</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register" type="button" role="tab" aria-controls="register" aria-selected="false">Registrarse</button>
+                            </li>
+                        </ul>
+                        
+                        <!-- Tab Content -->
+                        <div class="tab-content" id="loginTabsContent">
+                            <!-- Login Form -->
+                            <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                                <form class="needs-validation" novalidate>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Correo Electrónico</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                                            <input type="email" class="form-control" id="email" placeholder="usuario@ejemplo.com" required>
+                                            <div class="invalid-feedback">
+                                                Por favor ingresa un correo electrónico válido.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="password" class="form-label">Contraseña</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                                            <input type="password" class="form-control" id="password" required>
+                                            <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                                                <i class="bi bi-eye"></i>
+                                            </button>
+                                            <div class="invalid-feedback">
+                                                Por favor ingresa tu contraseña.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 form-check">
+                                        <input type="checkbox" class="form-check-input" id="rememberMe">
+                                        <label class="form-check-label" for="rememberMe">Recordarme</label>
+                                    </div>
+                                    <div class="mb-3">
+                                        <button type="submit" class="btn btn-primary w-100 py-2">Iniciar Sesión</button>
+                                    </div>
+                                    <div class="text-center">
+                                        <a href="#" class="text-decoration-none">¿Olvidaste tu contraseña?</a>
+                                    </div>
+                                </form>
+                                
+                                <div class="divider d-flex align-items-center my-4">
+                                    <span class="text-muted mx-3">O continúa con</span>
+                                </div>
+                                
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-outline-dark">
+                                        <i class="bi bi-google me-2"></i>Google
+                                    </button>
+                                    <button class="btn btn-outline-primary">
+                                        <i class="bi bi-facebook me-2"></i>Facebook
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Registration Form -->
+                            <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+                                <form class="needs-validation" novalidate>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="firstName" class="form-label">Nombre</label>
+                                            <input type="text" class="form-control" id="firstName" required>
+                                            <div class="invalid-feedback">
+                                                Por favor ingresa tu nombre.
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="lastName" class="form-label">Apellido</label>
+                                            <input type="text" class="form-control" id="lastName" required>
+                                            <div class="invalid-feedback">
+                                                Por favor ingresa tu apellido.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="registerEmail" class="form-label">Correo Electrónico</label>
+                                        <input type="email" class="form-control" id="registerEmail" required>
+                                        <div class="invalid-feedback">
+                                            Por favor ingresa un correo electrónico válido.
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="registerPassword" class="form-label">Contraseña</label>
+                                        <input type="password" class="form-control" id="registerPassword" required>
+                                        <div class="invalid-feedback">
+                                            Por favor crea una contraseña.
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="confirmPassword" class="form-label">Confirmar Contraseña</label>
+                                        <input type="password" class="form-control" id="confirmPassword" required>
+                                        <div class="invalid-feedback">
+                                            Las contraseñas no coinciden.
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="studentId" class="form-label">Número de Carné Estudiantil</label>
+                                        <input type="text" class="form-control" id="studentId" required>
+                                        <div class="invalid-feedback">
+                                            Por favor ingresa tu número de carné.
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 form-check">
+                                        <input type="checkbox" class="form-check-input" id="termsCheck" required>
+                                        <label class="form-check-label" for="termsCheck">
+                                            Acepto los <a href="#">Términos y Condiciones</a> y la <a href="#">Política de Privacidad</a>
+                                        </label>
+                                        <div class="invalid-feedback">
+                                            Debes aceptar los términos y condiciones para continuar.
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <button type="submit" class="btn btn-primary w-100 py-2">Registrarme</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="mb-4"><span class="fw-bold">Skill's</span> Engineer</h5>
+                    <p class="mb-3">Una iniciativa de la Escuela de Ingeniería de la modalidad a distancia, formando profesionales en tecnología con los conocimientos más actualizados y relevantes para el mercado laboral actual.</p>
+                    <p class="fw-bold mb-3">Proyecto oficial de la <strong>Escuela de Ingeniería de la Universidad Continental</strong> - Modalidad a distancia, disponible para todos los estudiantes universitarios.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white me-2"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="mb-4">Enlaces rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white text-decoration-none">Inicio</a></li>
+                        <li class="mb-2"><a href="cursos.html" class="text-white text-decoration-none">Cursos</a></li>
+                        <li class="mb-2"><a href="nosotros.html" class="text-white text-decoration-none">Nosotros</a></li>
+                        <li class="mb-2"><a href="contacto.html" class="text-white text-decoration-none">Contacto</a></li>
+                        <li><a href="blog.html" class="text-white text-decoration-none">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="mb-4">Áreas</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="ciberseguridad.html" class="text-white text-decoration-none">Ciberseguridad</a></li>
+                        <li class="mb-2"><a href="bases-datos.html" class="text-white text-decoration-none">Bases de Datos</a></li>
+                        <li class="mb-2"><a href="programacion.html" class="text-white text-decoration-none">Programación</a></li>
+                        <li><a href="gestion-ti.html" class="text-white text-decoration-none">Gestión de TI</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="mb-4">Contacto</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-geo-alt me-2"></i> Campus Universitario, Edificio de Tecnología</li>
+                        <li class="mb-2"><i class="bi bi-envelope me-2"></i> contacto@skillsengineer.edu</li>
+                        <li class="mb-2"><i class="bi bi-telephone me-2"></i> +123 456 7890</li>
+                        <li><i class="bi bi-clock me-2"></i> Lun - Vie: 8:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2023 <span class="fw-bold">Skill's Engineer</span>. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="btn btn-primary back-to-top" role="button"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Librerías de animación y efectos -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.3/smooth-scroll.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+    
+    <!-- Scripts personalizados -->
+    <script src="js/script.js"></script>
+    <script src="js/professional.js"></script>
+    <script>
+        // Toggle password visibility
+        document.getElementById('togglePassword').addEventListener('click', function() {
+            const passwordInput = document.getElementById('password');
+            const icon = this.querySelector('i');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                icon.classList.remove('bi-eye');
+                icon.classList.add('bi-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                icon.classList.remove('bi-eye-slash');
+                icon.classList.add('bi-eye');
+            }
+        });
+
+        // Validate matching passwords
+        document.querySelector('#register form').addEventListener('submit', function(event) {
+            const password = document.getElementById('registerPassword').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            
+            if (password !== confirmPassword) {
+                document.getElementById('confirmPassword').setCustomValidity('Las contraseñas no coinciden');
+                event.preventDefault();
+                event.stopPropagation();
+            } else {
+                document.getElementById('confirmPassword').setCustomValidity('');
+            }
+        });
+
+        // Check for hash in URL to switch to registration tab
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.location.hash === '#register') {
+                // Activate the registration tab
+                const registerTab = new bootstrap.Tab(document.getElementById('register-tab'));
+                registerTab.show();
+            }
+        });
+        
+        // Demo login credentials
+        document.querySelector('#login form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            // Credenciales de demostración
+            const validCredentials = [
+                { email: 'estudiante@skillsengineer.edu', password: 'demo1234', name: 'Estudiante Básico', course: 'Ciberseguridad', role: 'student' },
+                { email: 'premium@skillsengineer.edu', password: 'premium2023', name: 'Estudiante Premium', course: 'Bases de Datos', role: 'premium' },
+                { email: 'admin@skillsengineer.edu', password: 'admin2023', name: 'Administrador', course: 'Panel de Administración', role: 'admin' }
+            ];
+            
+            // Buscar si hay coincidencia con las credenciales de demostración
+            const matchedUser = validCredentials.find(user => user.email === email && user.password === password);
+            
+            if (matchedUser) {
+                // Mostrar mensaje de éxito y redireccionar al dashboard con el rol como parámetro
+                alert(`¡Bienvenido/a ${matchedUser.name}! Accediendo a ${matchedUser.course}...`);
+                window.location.href = `dashboard.html?role=${matchedUser.role}`;
+            } else {
+                // Mostrar mensaje de error
+                alert('Credenciales incorrectas. Para propósitos de demostración, utiliza las credenciales mencionadas en la documentación o en la página de ciberseguridad.');
+            }
+        });
+    </script>
+</body>
+</html> 

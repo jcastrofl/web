@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulos del Curso | Skill's Engineer</title>
+    
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    
+    <!-- Animation Libraries -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/course-detail.css">
+    <link rel="stylesheet" href="css/professional.css">
+    
+    <!-- Preload -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" as="script">
+    <link rel="preload" href="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js" as="script">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span>Skill's</span> Engineer
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Cursos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item active" href="ciberseguridad.html">Ciberseguridad</a></li>
+                            <li><a class="dropdown-item" href="bases-datos.html">Bases de Datos</a></li>
+                            <li><a class="dropdown-item" href="programacion.html">Programación</a></li>
+                            <li><a class="dropdown-item" href="gestion-ti.html">Gestión de TI</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white ms-3 px-4" href="acceso.html">Acceder</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner Informativo Universidad Continental -->
+    <div class="uc-banner py-2 text-white">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-center">
+                <i class="bi bi-award me-2"></i>
+                <p class="mb-0 fw-semibold">Proyecto oficial de la <strong>Escuela de Ingeniería de la Universidad Continental</strong> - Modalidad a distancia | Disponible para todos los estudiantes de la universidad</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Encabezado del curso -->
+    <header class="py-4 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8" data-aos="fade-right">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb mb-0">
+                            <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                            <li class="breadcrumb-item"><a href="ciberseguridad.html">Ciberseguridad</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Ethical Hacking y Pentesting</li>
+                        </ol>
+                    </nav>
+                    <h1 class="fw-bold mt-4 display-4 text-primary">Ethical Hacking y Pentesting</h1>
+                    <p class="lead mb-0">Aprende las técnicas y metodologías utilizadas por los profesionales de seguridad informática para detectar y corregir vulnerabilidades.</p>
+                </div>
+                <div class="col-lg-4 mt-4 mt-lg-0 text-center" data-aos="fade-left">
+                    <img src="img/curso-ethical-hacking.jpg" alt="Ethical Hacking" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Información del curso y progreso -->
+    <section class="py-5 border-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8" data-aos="fade-up">
+                    <!-- Detalles del curso -->
+                    <div class="d-flex flex-wrap align-items-center mb-4">
+                        <div class="me-4 mb-2">
+                            <span class="badge bg-primary px-3 py-2">Intermedio-Avanzado</span>
+                        </div>
+                        <div class="me-4 mb-2">
+                            <i class="bi bi-clock me-2 text-primary"></i>
+                            <span>10 semanas (80 horas)</span>
+                        </div>
+                        <div class="me-4 mb-2">
+                            <i class="bi bi-person-check me-2 text-primary"></i>
+                            <span>Certificado oficial</span>
+                        </div>
+                        <div class="mb-2">
+                            <div class="d-flex align-items-center">
+                                <div class="text-warning me-2">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                </div>
+                                <span class="text-muted small">4.8 (142 reseñas)</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Instructores -->
+                    <div class="mb-4">
+                        <h5 class="fw-bold mb-3">Instructores:</h5>
+                        <div class="d-flex">
+                            <div class="me-3">
+                                <img src="img/instructor-1.jpg" alt="Instructor" class="rounded-circle" width="60" height="60">
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Ing. Carlos Mendoza</h6>
+                                <p class="text-muted mb-0 small">CISSP, CEH, OSCP - Especialista en Seguridad Informática con más de 12 años de experiencia en pentesting.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Progreso del curso -->
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h5 class="fw-bold mb-0">Tu progreso:</h5>
+                            <span class="badge bg-success">25% completado</span>
+                        </div>
+                        <div class="progress" style="height: 10px;">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Descripción del curso -->
+                    <div class="mb-4">
+                        <h5 class="fw-bold mb-3">Descripción del curso:</h5>
+                        <p>Este curso intensivo de Ethical Hacking te proporcionará las habilidades necesarias para identificar y explotar vulnerabilidades en sistemas, redes y aplicaciones, siempre con un enfoque ético y legal.</p>
+                        <p>Aprenderás a utilizar las mismas herramientas y técnicas empleadas por hackers maliciosos, pero con el propósito de fortalecer la seguridad y proteger los activos informáticos de las organizaciones.</p>
+                        <p>A través de laboratorios prácticos y escenarios reales, desarrollarás las competencias que demanda el mercado laboral actual en el campo de la ciberseguridad.</p>
+                    </div>
+                    
+                    <!-- Requisitos -->
+                    <div class="mb-4">
+                        <h5 class="fw-bold mb-3">Requisitos previos:</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Conocimientos básicos de redes y sistemas operativos</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Familiaridad con entornos Linux/Unix</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Nociones de programación (Python preferiblemente)</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Interés por la seguridad informática</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="200">
+                    <!-- Panel de acceso rápido -->
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="fw-bold mb-4">Acceso rápido</h5>
+                            <a href="#modules" class="btn btn-primary w-100 mb-3">Continuar aprendiendo</a>
+                            <a href="#" class="btn btn-outline-primary w-100 mb-3">Descargar materiales</a>
+                            <a href="#" class="btn btn-outline-primary w-100">Unirse al foro</a>
+                            
+                            <hr class="my-4">
+                            
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="me-3 bg-primary-soft p-2 rounded">
+                                    <i class="bi bi-calendar-check text-primary"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0 fw-semibold">Próxima sesión en vivo</h6>
+                                    <p class="text-muted small mb-0">Jueves 15, 18:00 hrs.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="me-3 bg-primary-soft p-2 rounded">
+                                    <i class="bi bi-file-earmark-text text-primary"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0 fw-semibold">Materiales disponibles</h6>
+                                    <p class="text-muted small mb-0">12 recursos descargables</p>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex align-items-center">
+                                <div class="me-3 bg-primary-soft p-2 rounded">
+                                    <i class="bi bi-chat-dots text-primary"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0 fw-semibold">Soporte técnico</h6>
+                                    <p class="text-muted small mb-0">Disponible 24/7</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contenido del curso - módulos -->
+    <section id="modules" class="py-5">
+        <div class="container">
+            <h2 class="fw-bold mb-4" data-aos="fade-up">Contenido del Curso</h2>
+            
+            <div class="row">
+                <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+                    <!-- Acordeón de módulos -->
+                    <div class="accordion" id="courseModules">
+                        <!-- Módulo 1 -->
+                        <div class="accordion-item border-0 mb-3 shadow-sm">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#module1" aria-expanded="true" aria-controls="module1">
+                                    <div class="me-3 rounded-circle bg-primary text-white" style="width: 30px; height: 30px; display: flex; align-items: center; justify-content: center;">1</div>
+                                    Introducción al Ethical Hacking
+                                </button>
+                            </h2>
+                            <div id="module1" class="accordion-collapse collapse show" data-bs-parent="#courseModules">
+                                <div class="accordion-body">
+                                    <p>Fundamentos y principios éticos en la seguridad informática. Marco legal y tipos de pruebas de penetración.</p>
+                                    
+                                    <div class="list-group list-group-flush">
+                                        <!-- Lección 1 -->
+                                        <div class="list-group-item px-0 py-3 d-flex align-items-center">
+                                            <div class="lesson-icon me-3 text-primary">
+                                                <i class="bi bi-play-circle-fill"></i>
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <h6 class="mb-1 fw-semibold">1.1 Fundamentos del Ethical Hacking</h6>
+                                                <p class="text-muted small mb-0">45 minutos - Video + Recursos</p>
+                                            </div>
+                                            <div>
+                                                <button class="btn btn-sm btn-primary video-btn" data-video-title="1.1 Fundamentos del Ethical Hacking">Ver</button>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Lección 2 -->
+                                        <div class="list-group-item px-0 py-3 d-flex align-items-center">
+                                            <div class="lesson-icon me-3 text-primary">
+                                                <i class="bi bi-play-circle-fill"></i>
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <h6 class="mb-1 fw-semibold">1.2 Marco legal y ético</h6>
+                                                <p class="text-muted small mb-0">30 minutos - Video</p>
+                                            </div>
+                                            <div>
+                                                <button class="btn btn-sm btn-primary video-btn" data-video-title="1.2 Marco legal y ético">Ver</button>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Lección 3 -->
+                                        <div class="list-group-item px-0 py-3 d-flex align-items-center">
+                                            <div class="lesson-icon me-3 text-primary">
+                                                <i class="bi bi-file-earmark-text"></i>
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <h6 class="mb-1 fw-semibold">1.3 Tipos de pruebas de penetración</h6>
+                                                <p class="text-muted small mb-0">Lectura - 15 minutos</p>
+                                            </div>
+                                            <div>
+                                                <button class="btn btn-sm btn-outline-primary" data-bs-toggle="tooltip" title="Descargar material">
+                                                    <i class="bi bi-download"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Cuestionario -->
+                                        <div class="list-group-item px-0 py-3 d-flex align-items-center">
+                                            <div class="lesson-icon me-3 text-primary">
+                                                <i class="bi bi-check2-square"></i>
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <h6 class="mb-1 fw-semibold">Cuestionario: Introducción al Ethical Hacking</h6>
+                                                <p class="text-muted small mb-0">10 preguntas - 20 minutos</p>
+                                            </div>
+                                            <div>
+                                                <button class="btn btn-sm btn-success">Completado</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Módulo 2 -->
+                        <div class="accordion-item border-0 mb-3 shadow-sm">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#module2" aria-expanded="false" aria-controls="module2">
+                                    <div class="me-3 rounded-circle bg-primary text-white" style="width: 30px; height: 30px; display: flex; align-items: center; justify-content: center;">2</div>
+                                    Reconocimiento y escaneo
+                                </button>
+                            </h2>
+                            <div id="module2" class="accordion-collapse collapse" data-bs-parent="#courseModules">
+                                <div class="accordion-body">
+                                    <p>Técnicas de recopilación de información y escaneo de vulnerabilidades. Uso de herramientas como Nmap, Shodan y Maltego.</p>
+                                    
+                                    <div class="list-group list-group-flush">
+                                        <!-- Lección 1 -->
+                                        <div class="list-group-item px-0 py-3 d-flex align-items-center">
+                                            <div class="lesson-icon me-3 text-primary">
+                                                <i class="bi bi-play-circle-fill"></i>
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <h6 class="mb-1 fw-semibold">2.1 Reconocimiento pasivo y activo</h6>
+                                                <p class="text-muted small mb-0">40 minutos - Video + Laboratorio</p>
+                                            </div>
+                                            <div>
+                                                <button class="btn btn-sm btn-primary video-btn" data-video-title="2.1 Reconocimiento pasivo y activo">Ver</button>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Lección 2 -->
+                                        <div class="list-group-item px-0 py-3 d-flex align-items-center">
+                                            <div class="lesson-icon me-3 text-primary">
+                                                <i class="bi bi-play-circle-fill"></i>
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <h6 class="mb-1 fw-semibold">2.2 Escaneo con Nmap</h6>
+                                                <p class="text-muted small mb-0">50 minutos - Video + Laboratorio</p>
+                                            </div>
+                                            <div>
+                                                <button class="btn btn-sm btn-primary video-btn" data-video-title="2.2 Escaneo con Nmap">Ver</button>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Lección 3 -->
+                                        <div class="list-group-item px-0 py-3 d-flex align-items-center">
+                                            <div class="lesson-icon me-3 text-primary">
+                                                <i class="bi bi-play-circle-fill"></i>
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <h6 class="mb-1 fw-semibold">2.3 OSINT y herramientas avanzadas</h6>
+                                                <p class="text-muted small mb-0">45 minutos - Video + Recursos</p>
+                                            </div>
+                                            <div>
+                                                <button class="btn btn-sm btn-outline-primary">Iniciar</button>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Práctica -->
+                                        <div class="list-group-item px-0 py-3 d-flex align-items-center">
+                                            <div class="lesson-icon me-3 text-primary">
+                                                <i class="bi bi-laptop"></i>
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <h6 class="mb-1 fw-semibold">Laboratorio: Escaneo de vulnerabilidades</h6>
+                                                <p class="text-muted small mb-0">90 minutos - Práctica</p>
+                                            </div>
+                                            <div>
+                                                <button class="btn btn-sm btn-outline-primary">Acceder</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Módulos adicionales (cerrados) -->
+                        <div class="accordion-item border-0 mb-3 shadow-sm">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#module3" aria-expanded="false" aria-controls="module3">
+                                    <div class="me-3 rounded-circle bg-primary text-white" style="width: 30px; height: 30px; display: flex; align-items: center; justify-content: center;">3</div>
+                                    Explotación de vulnerabilidades
+                                </button>
+                            </h2>
+                            <div id="module3" class="accordion-collapse collapse" data-bs-parent="#courseModules">
+                                <div class="accordion-body">
+                                    <p>Metodologías y técnicas para la explotación de vulnerabilidades. Uso de Metasploit y otras herramientas especializadas.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item border-0 mb-3 shadow-sm">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#module4" aria-expanded="false" aria-controls="module4">
+                                    <div class="me-3 rounded-circle bg-primary text-white" style="width: 30px; height: 30px; display: flex; align-items: center; justify-content: center;">4</div>
+                                    Post-explotación y mantenimiento de acceso
+                                </button>
+                            </h2>
+                            <div id="module4" class="accordion-collapse collapse" data-bs-parent="#courseModules">
+                                <div class="accordion-body">
+                                    <p>Técnicas para establecer persistencia, escalar privilegios y moverse lateralmente en una red comprometida.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item border-0 mb-3 shadow-sm">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#module5" aria-expanded="false" aria-controls="module5">
+                                    <div class="me-3 rounded-circle bg-primary text-white" style="width: 30px; height: 30px; display: flex; align-items: center; justify-content: center;">5</div>
+                                    Web Application Pentesting
+                                </button>
+                            </h2>
+                            <div id="module5" class="accordion-collapse collapse" data-bs-parent="#courseModules">
+                                <div class="accordion-body">
+                                    <p>Vulnerabilidades web según OWASP Top 10. Uso de herramientas como Burp Suite, SQLmap, y técnicas para evadir WAF.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item border-0 mb-3 shadow-sm">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#module6" aria-expanded="false" aria-controls="module6">
+                                    <div class="me-3 rounded-circle bg-primary text-white" style="width: 30px; height: 30px; display: flex; align-items: center; justify-content: center;">6</div>
+                                    Auditoría de redes inalámbricas
+                                </button>
+                            </h2>
+                            <div id="module6" class="accordion-collapse collapse" data-bs-parent="#courseModules">
+                                <div class="accordion-body">
+                                    <p>Seguridad en redes WiFi, protocolos y ataques. Uso de Aircrack-ng y otras herramientas.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item border-0 mb-3 shadow-sm">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#module7" aria-expanded="false" aria-controls="module7">
+                                    <div class="me-3 rounded-circle bg-primary text-white" style="width: 30px; height: 30px; display: flex; align-items: center; justify-content: center;">7</div>
+                                    Ingeniería social
+                                </button>
+                            </h2>
+                            <div id="module7" class="accordion-collapse collapse" data-bs-parent="#courseModules">
+                                <div class="accordion-body">
+                                    <p>Técnicas y herramientas de ingeniería social. Phishing, pretexting y otras tácticas para comprometer la seguridad humana.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item border-0 mb-3 shadow-sm">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#module8" aria-expanded="false" aria-controls="module8">
+                                    <div class="me-3 rounded-circle bg-primary text-white" style="width: 30px; height: 30px; display: flex; align-items: center; justify-content: center;">8</div>
+                                    Documentación y reportes
+                                </button>
+                            </h2>
+                            <div id="module8" class="accordion-collapse collapse" data-bs-parent="#courseModules">
+                                <div class="accordion-body">
+                                    <p>Creación de informes de penetración profesionales. Recomendaciones y mejores prácticas para la entrega de resultados.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mt-4 mt-lg-0">
+                    <!-- Visualizador de video -->
+                    <div class="card shadow-sm mb-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card-header bg-white py-3">
+                            <h5 class="fw-bold mb-0" id="videoTitle">1.1 Fundamentos del Ethical Hacking</h5>
+                        </div>
+                        <div class="card-body p-0" id="videoContainer">
+                            <div class="ratio ratio-16x9">
+                                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Recursos adicionales -->
+                    <div class="card shadow-sm" data-aos="fade-up" data-aos-delay="400">
+                        <div class="card-header bg-white py-3">
+                            <h5 class="fw-bold mb-0">Recursos adicionales</h5>
+                        </div>
+                        <div class="list-group list-group-flush">
+                            <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+                                <i class="bi bi-file-pdf text-danger me-3 fs-5"></i>
+                                <div>
+                                    <h6 class="mb-0 fw-semibold">Guía completa de Ethical Hacking</h6>
+                                    <p class="text-muted small mb-0">PDF - 3.2 MB</p>
+                                </div>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+                                <i class="bi bi-file-earmark-text text-primary me-3 fs-5"></i>
+                                <div>
+                                    <h6 class="mb-0 fw-semibold">Cheatsheet comandos Nmap</h6>
+                                    <p class="text-muted small mb-0">TXT - 125 KB</p>
+                                </div>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+                                <i class="bi bi-link-45deg text-success me-3 fs-5"></i>
+                                <div>
+                                    <h6 class="mb-0 fw-semibold">Laboratorios virtuales</h6>
+                                    <p class="text-muted small mb-0">Acceso online</p>
+                                </div>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+                                <i class="bi bi-people text-info me-3 fs-5"></i>
+                                <div>
+                                    <h6 class="mb-0 fw-semibold">Foro de discusión</h6>
+                                    <p class="text-muted small mb-0">Comunidad de estudiantes</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="mb-4"><span class="fw-bold">Skill's</span> Engineer</h5>
+                    <p class="mb-3">Una iniciativa de la Escuela de Ingeniería de la modalidad a distancia, formando profesionales en tecnología con los conocimientos más actualizados y relevantes para el mercado laboral actual.</p>
+                    <p class="fw-bold mb-3">Proyecto oficial de la <strong>Escuela de Ingeniería de la Universidad Continental</strong> - Modalidad a distancia, disponible para todos los estudiantes universitarios.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white me-2"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="mb-4">Enlaces rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Inicio</a></li>
+                        <li><a href="nosotros.html" class="text-white">Nosotros</a></li>
+                        <li><a href="contacto.html" class="text-white">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="mb-4">Cursos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="ciberseguridad.html" class="text-white">Ciberseguridad</a></li>
+                        <li><a href="bases-datos.html" class="text-white">Bases de Datos</a></li>
+                        <li><a href="programacion.html" class="text-white">Programación</a></li>
+                        <li><a href="gestion-ti.html" class="text-white">Gestión de TI</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                <p class="mb-0">&copy; 2023 Skill's Engineer. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notifications Modal -->
+    <div class="modal fade" id="notificationsModal" tabindex="-1" aria-labelledby="notificationsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="notificationsModalLabel">Notificaciones</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex align-items-center py-3">
+                            <div class="flex-shrink-0 me-3">
+                                <div class="avatar-circle bg-primary text-white">
+                                    <i class="bi bi-bell-fill"></i>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h6 class="mb-1">Nuevo material disponible</h6>
+                                <p class="text-muted mb-0 small">Se ha agregado nuevo material al Módulo 3.</p>
+                                <span class="text-muted small">Hace 2 horas</span>
+                            </div>
+                            <div class="flex-shrink-0 ms-2">
+                                <span class="badge bg-primary rounded-pill">Nuevo</span>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center py-3">
+                            <div class="flex-shrink-0 me-3">
+                                <div class="avatar-circle bg-danger text-white">
+                                    <i class="bi bi-calendar-event-fill"></i>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h6 class="mb-1">Recordatorio: Quiz del Módulo 3</h6>
+                                <p class="text-muted mb-0 small">El quiz del Módulo 3 estará disponible mañana.</p>
+                                <span class="text-muted small">Hace 5 horas</span>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center py-3">
+                            <div class="flex-shrink-0 me-3">
+                                <div class="avatar-circle bg-success text-white">
+                                    <i class="bi bi-chat-left-text-fill"></i>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h6 class="mb-1">Respuesta en el foro</h6>
+                                <p class="text-muted mb-0 small">La instructora respondió a tu pregunta sobre inyección SQL.</p>
+                                <span class="text-muted small">Ayer</span>
+                            </div>
+                            <div class="flex-shrink-0 ms-2">
+                                <span class="badge bg-primary rounded-pill">Nuevo</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-link text-decoration-none">Ver todas las notificaciones</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de completar lección -->
+    <div class="modal fade" id="lessonCompletionModal" tabindex="-1" aria-labelledby="lessonCompletionModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center pb-5">
+                    <div class="mb-4">
+                        <i class="bi bi-check-circle-fill text-success" style="font-size: 4rem;"></i>
+                    </div>
+                    <h3 class="fw-bold mb-3">¡Lección completada!</h3>
+                    <p class="mb-4">Has completado satisfactoriamente la lección "Fundamentos del Ethical Hacking".</p>
+                    <div class="d-flex justify-content-center">
+                        <button type="button" class="btn btn-primary me-2" data-bs-dismiss="modal">Continuar con el curso</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Librerías de animación -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+    
+    <!-- Scripts personalizados -->
+    <script src="js/script.js"></script>
+    <script src="js/professional.js"></script>
+    
+    <script>
+        // Inicialización de tooltips
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+        
+        // Manejo de botones de video
+        document.querySelectorAll('.video-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const videoContainer = document.getElementById('videoContainer');
+                const videoTitle = document.getElementById('videoTitle');
+                
+                // Cambiar título del video
+                videoTitle.textContent = this.getAttribute('data-video-title');
+                
+                // Simular carga del video
+                videoContainer.innerHTML = '<div class="text-center py-5"><div class="spinner-border text-primary" role="status"><span class="visually-hidden">Cargando...</span></div><p class="mt-3">Cargando video...</p></div>';
+                
+                // Simular video cargado después de 1s
+                setTimeout(() => {
+                    videoContainer.innerHTML = `
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video" allowfullscreen></iframe>
+                        </div>
+                    `;
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+</html> 

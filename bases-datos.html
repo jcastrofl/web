@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos de Bases de Datos | Skill's Engineer</title>
+    <!-- Preconexiones para optimización -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Estilos principales -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <!-- Librerías de animación -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
+    
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/professional.css">
+    
+    <!-- Preload de librerías JavaScript para mejor rendimiento -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" as="script">
+    <link rel="preload" href="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js" as="script">
+</head>
+<body class="database-theme">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span>Skill's</span> Engineer
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Cursos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="ciberseguridad.html">Ciberseguridad</a></li>
+                            <li><a class="dropdown-item active" href="bases-datos.html">Bases de Datos</a></li>
+                            <li><a class="dropdown-item" href="programacion.html">Programación</a></li>
+                            <li><a class="dropdown-item" href="gestion-ti.html">Gestión de TI</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white ms-3 px-4" href="acceso.html">Acceder</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner Informativo Universidad Continental -->
+    <div class="uc-banner py-2 text-white">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-center">
+                <img src="https://continua.edu.pe/wp-content/uploads/2024/12/LOGO-01-1.png" alt="Logo Universidad Continental" class="me-3" height="40">
+                <p class="mb-0 fw-semibold">Proyecto oficial de la <strong>Escuela de Ingeniería de la Universidad Continental</strong> - Modalidad a distancia | Disponible para todos los estudiantes de la universidad</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section con Fondo Temático -->
+    <section class="hero-video-section position-relative overflow-hidden">
+        <!-- Overlay para mejorar la legibilidad del texto -->
+        <div class="hero-overlay"></div>
+        
+        <div class="container position-relative z-index-1 py-5">
+            <div class="row min-vh-75 align-items-center">
+                <div class="col-lg-7" data-aos="fade-right">
+                    <div class="hero-content text-white">
+                        <span class="badge bg-primary mb-3 fs-6">Bases de Datos</span>
+                        <h1 class="display-3 fw-bold mb-4 text-shadow parallax-element">Domina los Datos</h1>
+                        <p class="lead mb-4 fs-4 text-shadow parallax-element">Especialízate en tecnologías de bases de datos, desde SQL hasta NoSQL, y aprende a diseñar, optimizar y administrar entornos de datos complejos para aplicaciones modernas.</p>
+                        <div class="d-flex flex-wrap gap-3 mt-4">
+                            <a href="#cursos" class="btn btn-primary btn-lg pulse-btn parallax-element">
+                                <i class="bi bi-database me-2"></i>Explorar Cursos
+                            </a>
+                            <a href="acceso.html" class="btn btn-outline-light btn-lg parallax-element">
+                                <i class="bi bi-person-badge me-2"></i>Acceder
+                            </a>
+                        </div>
+                        
+                        <div class="mt-5 d-flex flex-wrap gap-4">
+                            <div class="d-flex align-items-center">
+                                <div class="icon-circle bg-primary text-white me-2">
+                                    <i class="bi bi-database-check"></i>
+                                </div>
+                                <span class="text-light">12+ Cursos Especializados</span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="icon-circle bg-primary text-white me-2">
+                                    <i class="bi bi-people"></i>
+                                </div>
+                                <span class="text-light">+4,500 Estudiantes</span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="icon-circle bg-primary text-white me-2">
+                                    <i class="bi bi-award"></i>
+                                </div>
+                                <span class="text-light">Certificaciones Oracle y Microsoft</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 d-none d-lg-block" data-aos="fade-left">
+                    <div class="hero-card bg-dark bg-opacity-75 p-4 rounded-3 border border-primary border-opacity-50 shadow-lg">
+                        <h3 class="text-white mb-3">¿Por qué Bases de Datos?</h3>
+                        <ul class="list-unstyled mb-0">
+                            <li class="d-flex align-items-center mb-3 text-white">
+                                <i class="bi bi-check-circle-fill text-success me-2 fs-5"></i>
+                                <span>Fundamental para cualquier empresa digital</span>
+                            </li>
+                            <li class="d-flex align-items-center mb-3 text-white">
+                                <i class="bi bi-check-circle-fill text-success me-2 fs-5"></i>
+                                <span>Altos salarios para DBA y científicos de datos</span>
+                            </li>
+                            <li class="d-flex align-items-center mb-3 text-white">
+                                <i class="bi bi-check-circle-fill text-success me-2 fs-5"></i>
+                                <span>Dominio del corazón de toda aplicación</span>
+                            </li>
+                            <li class="d-flex align-items-center text-white">
+                                <i class="bi bi-check-circle-fill text-success me-2 fs-5"></i>
+                                <span>Habilidades cruciales en la era del Big Data</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="fw-bold mb-4">¿Por qué estudiar Bases de Datos?</h2>
+                    <p class="lead text-muted mb-4">Las bases de datos son fundamentales para el funcionamiento de prácticamente todas las aplicaciones y sistemas informáticos modernos. Con el aumento exponencial de datos generados, las organizaciones necesitan profesionales capaces de diseñar, implementar y gestionar sistemas de bases de datos eficientes.</p>
+                    <div class="row g-4 mt-3">
+                        <div class="col-md-4">
+                            <div class="d-flex align-items-center justify-content-center mb-3">
+                                <div class="feature-icon bg-primary bg-gradient text-white rounded-circle">
+                                    <i class="bi bi-bar-chart-fill fs-2"></i>
+                                </div>
+                            </div>
+                            <h3 class="h5">Rol fundamental en TI</h3>
+                            <p class="text-muted">Las bases de datos son el corazón de los sistemas de información modernos.</p>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="d-flex align-items-center justify-content-center mb-3">
+                                <div class="feature-icon bg-primary bg-gradient text-white rounded-circle">
+                                    <i class="bi bi-cash-stack fs-2"></i>
+                                </div>
+                            </div>
+                            <h3 class="h5">Excelentes oportunidades</h3>
+                            <p class="text-muted">Los especialistas en bases de datos tienen una alta demanda y buenas remuneraciones.</p>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="d-flex align-items-center justify-content-center mb-3">
+                                <div class="feature-icon bg-primary bg-gradient text-white rounded-circle">
+                                    <i class="bi bi-graph-up-arrow fs-2"></i>
+                                </div>
+                            </div>
+                            <h3 class="h5">Tecnologías emergentes</h3>
+                            <p class="text-muted">Nuevas tecnologías como NoSQL y Big Data ofrecen desafíos interesantes y constante evolución.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="fw-bold text-center mb-5">Nuestros Cursos de Bases de Datos</h2>
+            
+            <!-- Course Filters -->
+            <div class="course-filter-container" data-aos="fade-up" data-aos-delay="100">
+                <button class="btn btn-outline-primary course-filter-btn active" data-filter="all">Todos</button>
+                <button class="btn btn-outline-primary course-filter-btn" data-filter="principiante">Principiante</button>
+                <button class="btn btn-outline-primary course-filter-btn" data-filter="intermedio">Intermedio</button>
+                <button class="btn btn-outline-primary course-filter-btn" data-filter="avanzado">Avanzado</button>
+                <button class="btn btn-outline-primary course-filter-btn" data-filter="certificacion">Certificación</button>
+            </div>
+            
+            <!-- Course Cards -->
+            <div class="row g-4">
+                <!-- Course 1 -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="row g-0">
+                            <div class="col-md-4 position-relative">
+                                <img src="img/curso-fundamentos-bd.jpg" class="img-fluid rounded-start h-100" alt="Fundamentos de Bases de Datos">
+                                <button class="btn btn-sm btn-primary video-btn position-absolute" data-bs-toggle="modal" data-bs-target="#videoModalDB1">
+                                    <i class="bi bi-play-circle-fill me-1"></i> Ver
+                                </button>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <span class="badge bg-primary course-badge">Principiante</span>
+                                    <h3 class="card-title h5 fw-bold">Fundamentos de Bases de Datos</h3>
+                                    <p class="card-text">Aprende los conceptos básicos de bases de datos, modelado de datos y lenguaje SQL para consultas y manipulación de datos.</p>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="text-warning me-2">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-half"></i>
+                                        </div>
+                                        <span class="text-muted small">(135 reseñas)</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="text-muted"><i class="bi bi-clock me-1"></i> 8 semanas</span>
+                                        <a href="curso-modulos.html" class="btn btn-outline-primary">Ver detalles</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 2 -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="row g-0">
+                            <div class="col-md-4 position-relative">
+                                <img src="img/curso-mysql-admin.jpg" class="img-fluid rounded-start h-100" alt="Administración de MySQL">
+                                <button class="btn btn-sm btn-primary video-btn position-absolute" data-bs-toggle="modal" data-bs-target="#videoModalDB2">
+                                    <i class="bi bi-play-circle-fill me-1"></i> Ver
+                                </button>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <span class="badge bg-success course-badge">Intermedio</span>
+                                    <h3 class="card-title h5 fw-bold">Administración de MySQL</h3>
+                                    <p class="card-text">Aprende a instalar, configurar y administrar servidores MySQL, incluyendo respaldos, recuperación y afinación de rendimiento.</p>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="text-warning me-2">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <span class="text-muted small">(148 reseñas)</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="text-muted"><i class="bi bi-clock me-1"></i> 10 semanas</span>
+                                        <a href="curso-detalle.html" class="btn btn-outline-primary">Ver detalles</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 3 -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="row g-0">
+                            <div class="col-md-4 position-relative">
+                                <img src="img/curso-sql-server.jpg" class="img-fluid rounded-start h-100" alt="SQL Server Avanzado">
+                                <button class="btn btn-sm btn-primary video-btn position-absolute" data-bs-toggle="modal" data-bs-target="#videoModalDB3">
+                                    <i class="bi bi-play-circle-fill me-1"></i> Ver
+                                </button>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <span class="badge bg-danger course-badge">Avanzado</span>
+                                    <h3 class="card-title h5 fw-bold">SQL Server Avanzado</h3>
+                                    <p class="card-text">Optimización de consultas, indexación avanzada, procedimientos almacenados y administración de SQL Server en entornos empresariales.</p>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="text-warning me-2">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star"></i>
+                                        </div>
+                                        <span class="text-muted small">(102 reseñas)</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="text-muted"><i class="bi bi-clock me-1"></i> 12 semanas</span>
+                                        <a href="curso-detalle.html" class="btn btn-outline-primary">Ver detalles</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 4 -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="row g-0">
+                            <div class="col-md-4 position-relative">
+                                <img src="img/curso-mongodb.jpg" class="img-fluid rounded-start h-100" alt="MongoDB y NoSQL">
+                                <button class="btn btn-sm btn-primary video-btn position-absolute" data-bs-toggle="modal" data-bs-target="#videoModalDB4">
+                                    <i class="bi bi-play-circle-fill me-1"></i> Ver
+                                </button>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <span class="badge bg-success course-badge">Intermedio</span>
+                                    <h3 class="card-title h5 fw-bold">MongoDB y NoSQL</h3>
+                                    <p class="card-text">Introducción a las bases de datos NoSQL, diseño de esquemas en MongoDB, replicación y sharding para escalabilidad.</p>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="text-warning me-2">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-half"></i>
+                                        </div>
+                                        <span class="text-muted small">(87 reseñas)</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="text-muted"><i class="bi bi-clock me-1"></i> 9 semanas</span>
+                                        <a href="curso-detalle.html" class="btn btn-outline-primary">Ver detalles</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 5 -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="row g-0">
+                            <div class="col-md-4 position-relative">
+                                <img src="img/curso-data-warehouse.jpg" class="img-fluid rounded-start h-100" alt="Data Warehousing">
+                                <button class="btn btn-sm btn-primary video-btn position-absolute" data-bs-toggle="modal" data-bs-target="#videoModalDB5">
+                                    <i class="bi bi-play-circle-fill me-1"></i> Ver
+                                </button>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <span class="badge bg-danger course-badge">Avanzado</span>
+                                    <h3 class="card-title h5 fw-bold">Data Warehousing y BI</h3>
+                                    <p class="card-text">Diseño e implementación de almacenes de datos, ETL, integración con herramientas de Business Intelligence y análisis de datos.</p>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="text-warning me-2">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star"></i>
+                                        </div>
+                                        <span class="text-muted small">(76 reseñas)</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="text-muted"><i class="bi bi-clock me-1"></i> 10 semanas</span>
+                                        <a href="curso-detalle.html" class="btn btn-outline-primary">Ver detalles</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 6 -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="600">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="row g-0">
+                            <div class="col-md-4 position-relative">
+                                <img src="img/curso-oracle-cert.jpg" class="img-fluid rounded-start h-100" alt="Certificación Oracle">
+                                <button class="btn btn-sm btn-primary video-btn position-absolute" data-bs-toggle="modal" data-bs-target="#videoModalDB6">
+                                    <i class="bi bi-play-circle-fill me-1"></i> Ver
+                                </button>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <span class="badge bg-info course-badge">Certificación</span>
+                                    <h3 class="card-title h5 fw-bold">Certificación Oracle OCA/OCP</h3>
+                                    <p class="card-text">Preparación completa para las certificaciones Oracle OCA/OCP, cubriendo administración, SQL, PL/SQL y arquitectura de base de datos.</p>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="text-warning me-2">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-half"></i>
+                                        </div>
+                                        <span class="text-muted small">(115 reseñas)</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="text-muted"><i class="bi bi-clock me-1"></i> 12 semanas</span>
+                                        <a href="curso-detalle.html" class="btn btn-outline-primary">Ver detalles</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pagination -->
+            <nav aria-label="Paginación de cursos" class="mt-5">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Siguiente</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Career Paths Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4">Trayectorias profesionales en Bases de Datos</h2>
+                    <p class="mb-4">Con nuestros cursos de bases de datos podrás desempeñarte en diversos roles dentro del campo de la gestión de datos:</p>
+                    
+                    <div class="accordion" id="careerAccordion">
+                        <div class="accordion-item border-0 mb-3 shadow-sm">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <i class="bi bi-database me-2"></i> Administrador de Bases de Datos (DBA)
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#careerAccordion">
+                                <div class="accordion-body">
+                                    Responsable de la instalación, configuración, actualización, respaldo y monitoreo del rendimiento de las bases de datos. Garantiza la seguridad, integridad y disponibilidad de los datos.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 mb-3 shadow-sm">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <i class="bi bi-diagram-3 me-2"></i> Diseñador de Bases de Datos
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#careerAccordion">
+                                <div class="accordion-body">
+                                    Diseña esquemas de bases de datos eficientes basados en requisitos de negocio. Define entidades, relaciones, normalización y estructuras para optimizar el almacenamiento y acceso a datos.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 mb-3 shadow-sm">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <i class="bi bi-graph-up me-2"></i> Analista de Business Intelligence
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#careerAccordion">
+                                <div class="accordion-body">
+                                    Diseña y desarrolla soluciones de inteligencia de negocios utilizando técnicas de data warehousing. Crea informes y dashboards para ayudar a la toma de decisiones basadas en datos.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 mb-3 shadow-sm">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    <i class="bi bi-cpu me-2"></i> Arquitecto de Datos
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#careerAccordion">
+                                <div class="accordion-body">
+                                    Define la estrategia y arquitectura general de datos de la organización. Establece políticas, estándares y selecciona tecnologías apropiadas para gestionar grandes volúmenes de datos.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <img src="img/database-career.svg" alt="Trayectorias profesionales en Bases de Datos" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+                    <h2 class="fw-bold mb-4">¿Listo para impulsar tu carrera en Bases de Datos?</h2>
+                    <p class="lead mb-4">Únete a nuestra comunidad de profesionales que dominan la gestión y análisis de datos en las organizaciones modernas.</p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="acceso.html" class="btn btn-light btn-lg">Inscribirse</a>
+                        <a href="contacto.html" class="btn btn-outline-light btn-lg">Más información</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="mb-4"><span class="fw-bold">Skill's</span> Engineer</h5>
+                    <p class="mb-3">Una iniciativa de la Escuela de Ingeniería de la modalidad a distancia, formando profesionales en tecnología con los conocimientos más actualizados y relevantes para el mercado laboral actual.</p>
+                    <p class="fw-bold mb-3">Proyecto oficial de la <strong>Escuela de Ingeniería de la Universidad Continental</strong> - Modalidad a distancia, disponible para todos los estudiantes universitarios.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white me-2"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="mb-4">Enlaces rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white text-decoration-none">Inicio</a></li>
+                        <li class="mb-2"><a href="cursos.html" class="text-white text-decoration-none">Cursos</a></li>
+                        <li class="mb-2"><a href="nosotros.html" class="text-white text-decoration-none">Nosotros</a></li>
+                        <li class="mb-2"><a href="contacto.html" class="text-white text-decoration-none">Contacto</a></li>
+                        <li><a href="blog.html" class="text-white text-decoration-none">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="mb-4">Áreas</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="ciberseguridad.html" class="text-white text-decoration-none">Ciberseguridad</a></li>
+                        <li class="mb-2"><a href="bases-datos.html" class="text-white text-decoration-none">Bases de Datos</a></li>
+                        <li class="mb-2"><a href="programacion.html" class="text-white text-decoration-none">Programación</a></li>
+                        <li><a href="gestion-ti.html" class="text-white text-decoration-none">Gestión de TI</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="mb-4">Contacto</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-geo-alt me-2"></i> Campus Universitario, Edificio de Tecnología</li>
+                        <li class="mb-2"><i class="bi bi-envelope me-2"></i> contacto@skillsengineer.edu</li>
+                        <li class="mb-2"><i class="bi bi-telephone me-2"></i> +123 456 7890</li>
+                        <li><i class="bi bi-clock me-2"></i> Lun - Vie: 8:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2023 <span class="fw-bold">Skill's Engineer</span>. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="btn btn-primary back-to-top" role="button"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Librerías de animación y efectos -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.3/smooth-scroll.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+    
+    <!-- Scripts personalizados -->
+    <script src="js/script.js"></script>
+    <script src="js/professional.js"></script>
+    
+    <!-- Modales de Videos -->
+    <!-- Video Modal 1: Fundamentos de Bases de Datos -->
+    <div class="modal fade" id="videoModalDB1" tabindex="-1" aria-labelledby="videoModalDBLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="videoModalDBLabel1">Fundamentos de Bases de Datos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/HXV3zeQKqGY" title="Fundamentos de Bases de Datos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="curso-detalle.html" class="btn btn-primary">Ver curso completo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Modal 2: Administración de MySQL -->
+    <div class="modal fade" id="videoModalDB2" tabindex="-1" aria-labelledby="videoModalDBLabel2" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="videoModalDBLabel2">Administración de MySQL</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/7S_tz1z_5bA" title="Administración de MySQL" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="curso-detalle.html" class="btn btn-primary">Ver curso completo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Modal 3: SQL Server Avanzado -->
+    <div class="modal fade" id="videoModalDB3" tabindex="-1" aria-labelledby="videoModalDBLabel3" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="videoModalDBLabel3">SQL Server Avanzado</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/uUdKAYl-F7g" title="SQL Server Avanzado" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="curso-detalle.html" class="btn btn-primary">Ver curso completo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Modal 4: MongoDB y NoSQL -->
+    <div class="modal fade" id="videoModalDB4" tabindex="-1" aria-labelledby="videoModalDBLabel4" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="videoModalDBLabel4">MongoDB y NoSQL</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/Www6cTUymCY" title="MongoDB y NoSQL" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="curso-detalle.html" class="btn btn-primary">Ver curso completo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Modal 5: Data Warehousing y Business Intelligence -->
+    <div class="modal fade" id="videoModalDB5" tabindex="-1" aria-labelledby="videoModalDBLabel5" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="videoModalDBLabel5">Data Warehousing y Business Intelligence</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/J326LIUrZM8" title="Data Warehousing y Business Intelligence" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="curso-detalle.html" class="btn btn-primary">Ver curso completo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Modal 6: Preparación para Certificación Oracle OCA/OCP -->
+    <div class="modal fade" id="videoModalDB6" tabindex="-1" aria-labelledby="videoModalDBLabel6" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="videoModalDBLabel6">Preparación para Certificación Oracle OCA/OCP</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/OlayBMInLyU" title="Preparación para Certificación Oracle OCA/OCP" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="curso-detalle.html" class="btn btn-primary">Ver curso completo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Inicializar AOS (Animaciones al hacer scroll)
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+</body>
+</html> 

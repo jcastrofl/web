@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos de Gestión de TI | Skill's Engineer</title>
+    
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    
+    <!-- Animation Libraries -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/professional.css">
+    
+    <!-- Preload -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" as="script">
+    <link rel="preload" href="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js" as="script">
+</head>
+<body class="it-management-theme">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span>Skill's</span> Engineer
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Cursos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="ciberseguridad.html">Ciberseguridad</a></li>
+                            <li><a class="dropdown-item" href="bases-datos.html">Bases de Datos</a></li>
+                            <li><a class="dropdown-item" href="programacion.html">Programación</a></li>
+                            <li><a class="dropdown-item active" href="gestion-ti.html">Gestión de TI</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white ms-3 px-4" href="acceso.html">Acceder</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner Informativo Universidad Continental -->
+    <div class="uc-banner py-2 text-white">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-center">
+                <i class="bi bi-award me-2"></i>
+                <p class="mb-0 fw-semibold">Proyecto oficial de la <strong>Escuela de Ingeniería de la Universidad Continental</strong> - Modalidad a distancia | Disponible para todos los estudiantes de la universidad</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section con Fondo Temático -->
+    <section class="hero-video-section position-relative overflow-hidden">
+        <!-- Overlay para mejorar la legibilidad del texto -->
+        <div class="hero-overlay"></div>
+        
+        <div class="container position-relative z-index-1 py-5">
+            <div class="row min-vh-75 align-items-center">
+                <div class="col-lg-7" data-aos="fade-right">
+                    <div class="hero-content text-white">
+                        <span class="badge bg-warning text-dark mb-3 fs-6">Gestión de TI</span>
+                        <h1 class="display-3 fw-bold mb-4 text-shadow parallax-element">Lidera con Estrategia y Visión</h1>
+                        <p class="lead mb-4 fs-4 text-shadow parallax-element">Aprende a liderar proyectos tecnológicos, gestionar equipos de TI y optimizar procesos con nuestros cursos especializados. Conviértete en un gestor de excelencia.</p>
+                        <div class="d-flex flex-wrap gap-3 mt-4">
+                            <a href="#cursos" class="btn btn-primary btn-lg pulse-btn parallax-element">
+                                <i class="bi bi-kanban me-2"></i>Explorar Cursos
+                            </a>
+                            <a href="acceso.html" class="btn btn-outline-light btn-lg parallax-element">
+                                <i class="bi bi-person-badge me-2"></i>Acceder
+                            </a>
+                        </div>
+                        
+                        <div class="mt-5 d-flex flex-wrap gap-4">
+                            <div class="d-flex align-items-center">
+                                <div class="icon-circle bg-primary text-white me-2">
+                                    <i class="bi bi-briefcase"></i>
+                                </div>
+                                <span class="text-light">10+ Cursos Especializados</span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="icon-circle bg-primary text-white me-2">
+                                    <i class="bi bi-people"></i>
+                                </div>
+                                <span class="text-light">+3,200 Estudiantes</span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="icon-circle bg-primary text-white me-2">
+                                    <i class="bi bi-award"></i>
+                                </div>
+                                <span class="text-light">Certificaciones ITIL, PMP y Scrum</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 d-none d-lg-block" data-aos="fade-left">
+                    <div class="hero-card bg-dark bg-opacity-75 p-4 rounded-3 border border-primary border-opacity-50 shadow-lg">
+                        <h3 class="text-white mb-3">¿Por qué estudiar Gestión de TI?</h3>
+                        <ul class="list-unstyled mb-0">
+                            <li class="d-flex align-items-center mb-3 text-white">
+                                <i class="bi bi-check-circle-fill text-success me-2 fs-5"></i>
+                                <span>Roles directivos y de liderazgo en TI</span>
+                            </li>
+                            <li class="d-flex align-items-center mb-3 text-white">
+                                <i class="bi bi-check-circle-fill text-success me-2 fs-5"></i>
+                                <span>Salarios superiores a roles técnicos</span>
+                            </li>
+                            <li class="d-flex align-items-center mb-3 text-white">
+                                <i class="bi bi-check-circle-fill text-success me-2 fs-5"></i>
+                                <span>Impacto estratégico en organizaciones</span>
+                            </li>
+                            <li class="d-flex align-items-center text-white">
+                                <i class="bi bi-check-circle-fill text-success me-2 fs-5"></i>
+                                <span>Habilidades transferibles a otros sectores</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Benefits -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="fw-bold text-center mb-5" data-aos="fade-up">¿Por qué estudiar Gestión de TI?</h2>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon bg-primary text-white rounded-circle mx-auto mb-4">
+                                <i class="bi bi-graph-up"></i>
+                            </div>
+                            <h3 class="h5 fw-bold">Alta demanda laboral</h3>
+                            <p class="text-muted mb-0">Las empresas buscan constantemente profesionales capacitados para liderar sus departamentos de TI y gestionar proyectos tecnológicos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon bg-primary text-white rounded-circle mx-auto mb-4">
+                                <i class="bi bi-cash-stack"></i>
+                            </div>
+                            <h3 class="h5 fw-bold">Salarios competitivos</h3>
+                            <p class="text-muted mb-0">Los roles de gestión en TI están entre los mejor remunerados del sector tecnológico, con excelentes perspectivas de crecimiento profesional.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon bg-primary text-white rounded-circle mx-auto mb-4">
+                                <i class="bi bi-award"></i>
+                            </div>
+                            <h3 class="h5 fw-bold">Impacto estratégico</h3>
+                            <p class="text-muted mb-0">Como gestor de TI, tendrás un rol clave en la toma de decisiones estratégicas y la transformación digital de las organizaciones.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Courses -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="fw-bold text-center mb-5" data-aos="fade-up">Programas destacados</h2>
+            
+            <!-- Course Filters -->
+            <div class="course-filter-container" data-aos="fade-up" data-aos-delay="100">
+                <button class="btn btn-outline-primary course-filter-btn active" data-filter="all">Todos</button>
+                <button class="btn btn-outline-primary course-filter-btn" data-filter="principiante">Principiante</button>
+                <button class="btn btn-outline-primary course-filter-btn" data-filter="intermedio">Intermedio</button>
+                <button class="btn btn-outline-primary course-filter-btn" data-filter="avanzado">Avanzado</button>
+                <button class="btn btn-outline-primary course-filter-btn" data-filter="certificacion">Certificación</button>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Course 1 -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="row g-0">
+                            <div class="col-md-4 position-relative">
+                                <img src="img/curso-itil.jpg" class="img-fluid rounded-start h-100 object-cover" alt="ITIL 4" style="object-fit: cover;">
+                                <span class="badge bg-primary course-badge">Certificación</span>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h3 class="card-title h5 fw-bold">ITIL 4 Foundation</h3>
+                                    <p class="card-text">Domina los fundamentos de ITIL 4 y prepárate para obtener la certificación oficial. Aprende las mejores prácticas para la gestión de servicios de TI.</p>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="text-warning me-2">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-half"></i>
+                                        </div>
+                                        <span class="text-muted small">(128 reseñas)</span>
+                                    </div>
+                                    <a href="curso-modulos.html" class="btn btn-outline-primary">Ver detalles</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 2 -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="row g-0">
+                            <div class="col-md-4 position-relative">
+                                <img src="img/curso-pmp.jpg" class="img-fluid rounded-start h-100 object-cover" alt="PMP" style="object-fit: cover;">
+                                <span class="badge bg-primary course-badge">Certificación</span>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h3 class="card-title h5 fw-bold">Project Management Professional (PMP)</h3>
+                                    <p class="card-text">Prepárate para obtener la certificación PMP® reconocida mundialmente. Aprende a gestionar proyectos siguiendo las mejores prácticas del PMI.</p>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="text-warning me-2">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <span class="text-muted small">(156 reseñas)</span>
+                                    </div>
+                                    <a href="curso-modulos.html" class="btn btn-outline-primary">Ver detalles</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 3 -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="row g-0">
+                            <div class="col-md-4 position-relative">
+                                <img src="img/curso-scrum.jpg" class="img-fluid rounded-start h-100 object-cover" alt="Scrum Master" style="object-fit: cover;">
+                                <span class="badge bg-primary course-badge">Certificación</span>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h3 class="card-title h5 fw-bold">Professional Scrum Master</h3>
+                                    <p class="card-text">Conviértete en un Scrum Master certificado y lidera equipos ágiles. Aprende a implementar Scrum para maximizar el valor entregado.</p>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="text-warning me-2">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star"></i>
+                                        </div>
+                                        <span class="text-muted small">(98 reseñas)</span>
+                                    </div>
+                                    <a href="curso-modulos.html" class="btn btn-outline-primary">Ver detalles</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 4 -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="row g-0">
+                            <div class="col-md-4 position-relative">
+                                <img src="img/curso-cobit.jpg" class="img-fluid rounded-start h-100 object-cover" alt="COBIT 2019" style="object-fit: cover;">
+                                <span class="badge bg-primary course-badge">Certificación</span>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h3 class="card-title h5 fw-bold">COBIT 2019 Foundation</h3>
+                                    <p class="card-text">Aprende los principios de gobierno y gestión de TI con COBIT 2019. Prepárate para obtener la certificación reconocida internacionalmente.</p>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="text-warning me-2">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-half"></i>
+                                        </div>
+                                        <span class="text-muted small">(87 reseñas)</span>
+                                    </div>
+                                    <a href="curso-modulos.html" class="btn btn-outline-primary">Ver detalles</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5" data-aos="fade-up">
+                <a href="#" class="btn btn-primary btn-lg">Ver todos los programas</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Paths -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="fw-bold mb-4">Trayectorias profesionales</h2>
+                    <p class="lead mb-4">Nuestros programas de Gestión de TI te preparan para destacar en diversos roles dentro del sector tecnológico:</p>
+                    
+                    <div class="mb-4">
+                        <h3 class="h5 fw-bold"><i class="bi bi-people-fill text-primary me-2"></i>Director de TI</h3>
+                        <p>Lidera departamentos de tecnología y define la estrategia digital de la organización.</p>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h3 class="h5 fw-bold"><i class="bi bi-kanban text-primary me-2"></i>Project Manager</h3>
+                        <p>Gestiona proyectos tecnológicos, asegurando su entrega en tiempo, costo y calidad.</p>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h3 class="h5 fw-bold"><i class="bi bi-shield-check text-primary me-2"></i>Consultor de ITIL</h3>
+                        <p>Asesora a empresas en la implementación de mejores prácticas para la gestión de servicios de TI.</p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="h5 fw-bold"><i class="bi bi-layers-half text-primary me-2"></i>Scrum Master / Agile Coach</h3>
+                        <p>Facilita la adopción de metodologías ágiles y lidera equipos de desarrollo de software.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left">
+                    <img src="img/career-paths-it.jpg" alt="Trayectorias profesionales en Gestión de TI" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="fw-bold text-center mb-5" data-aos="fade-up">Lo que dicen nuestros estudiantes</h2>
+            
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="testimonial-slider">
+                        <!-- Testimonial 1 -->
+                        <div class="p-4 bg-white rounded-3 shadow-sm mb-4" data-aos="fade-up" data-aos-delay="100">
+                            <div class="d-flex">
+                                <div class="me-3">
+                                    <img src="img/testimonial-1.jpg" alt="Estudiante" class="rounded-circle" width="60" height="60">
+                                </div>
+                                <div>
+                                    <h5 class="mb-1 fw-bold">Roberto Sánchez</h5>
+                                    <p class="text-muted small mb-3">Estudiante de ITIL 4 Foundation</p>
+                                    <div class="mb-2">
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                    </div>
+                                    <p class="mb-0">"El curso de ITIL 4 de Skill's Engineer me proporcionó las herramientas necesarias para implementar mejores prácticas en mi empresa. Aprobé el examen de certificación al primer intento gracias a la calidad de la formación recibida."</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Testimonial 2 -->
+                        <div class="p-4 bg-white rounded-3 shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                            <div class="d-flex">
+                                <div class="me-3">
+                                    <img src="img/testimonial-2.jpg" alt="Estudiante" class="rounded-circle" width="60" height="60">
+                                </div>
+                                <div>
+                                    <h5 class="mb-1 fw-bold">Lucía Mendoza</h5>
+                                    <p class="text-muted small mb-3">Estudiante de Professional Scrum Master</p>
+                                    <div class="mb-2">
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-half text-warning"></i>
+                                    </div>
+                                    <p class="mb-0">"La formación práctica y los ejercicios basados en casos reales me ayudaron enormemente en mi preparación como Scrum Master. Los conocimientos adquiridos me permitieron conseguir un ascenso en mi empresa."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call-to-Action -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+                    <h2 class="fw-bold mb-4">¿Listo para impulsar tu carrera en Gestión de TI?</h2>
+                    <p class="lead mb-4">Únete a nuestra comunidad de profesionales que están transformando la manera en que las organizaciones gestionan sus recursos tecnológicos.</p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="acceso.html" class="btn btn-light btn-lg">Inscribirse</a>
+                        <a href="contacto.html" class="btn btn-outline-light btn-lg">Más información</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="fw-bold mb-5 text-center" data-aos="fade-up">Preguntas frecuentes</h2>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="accordionFAQs">
+                        <!-- Pregunta 1 -->
+                        <div class="accordion-item mb-3 shadow-sm" data-aos="fade-up" data-aos-delay="100">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    ¿Las certificaciones incluyen el examen oficial?
+                                </button>
+                            </h3>
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionFAQs">
+                                <div class="accordion-body">
+                                    Nuestros cursos de preparación para certificaciones incluyen todo el material necesario para aprobar el examen, pero los vouchers para los exámenes oficiales se adquieren por separado. Sin embargo, ofrecemos descuentos especiales para nuestros estudiantes a través de acuerdos con los organismos certificadores.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Pregunta 2 -->
+                        <div class="accordion-item mb-3 shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    ¿Cuál es la tasa de aprobación de sus estudiantes?
+                                </button>
+                            </h3>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFAQs">
+                                <div class="accordion-body">
+                                    Nuestras tasas de aprobación se mantienen por encima del 92% en primera convocatoria para todas nuestras preparaciones de certificaciones. Esto se debe a nuestra metodología de enseñanza, los exámenes de práctica incluidos y el soporte continuo de nuestros instructores, todos ellos profesionales certificados con amplia experiencia.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Pregunta 3 -->
+                        <div class="accordion-item mb-3 shadow-sm" data-aos="fade-up" data-aos-delay="300">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    ¿Proporcionan constancias a nombre de la Universidad Continental?
+                                </button>
+                            </h3>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFAQs">
+                                <div class="accordion-body">
+                                    Sí, todos nuestros cursos incluyen un certificado de culminación a nombre de Skill's Engineer y la Universidad Continental, lo que añade un valor adicional a tu formación. Este certificado es distinto de las certificaciones oficiales de la industria, pero demuestra tu dedicación al aprendizaje continuo.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="mb-4"><span class="fw-bold">Skill's</span> Engineer</h5>
+                    <p class="mb-3">Una iniciativa de la Escuela de Ingeniería de la modalidad a distancia, formando profesionales en tecnología con los conocimientos más actualizados y relevantes para el mercado laboral actual.</p>
+                    <p class="fw-bold mb-3">Proyecto oficial de la <strong>Escuela de Ingeniería de la Universidad Continental</strong> - Modalidad a distancia, disponible para todos los estudiantes universitarios.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white me-2"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="mb-4">Enlaces rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white text-decoration-none">Inicio</a></li>
+                        <li class="mb-2"><a href="cursos.html" class="text-white text-decoration-none">Cursos</a></li>
+                        <li class="mb-2"><a href="nosotros.html" class="text-white text-decoration-none">Nosotros</a></li>
+                        <li class="mb-2"><a href="contacto.html" class="text-white text-decoration-none">Contacto</a></li>
+                        <li><a href="blog.html" class="text-white text-decoration-none">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="mb-4">Áreas</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="ciberseguridad.html" class="text-white text-decoration-none">Ciberseguridad</a></li>
+                        <li class="mb-2"><a href="bases-datos.html" class="text-white text-decoration-none">Bases de Datos</a></li>
+                        <li class="mb-2"><a href="programacion.html" class="text-white text-decoration-none">Programación</a></li>
+                        <li><a href="gestion-ti.html" class="text-white text-decoration-none">Gestión de TI</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="mb-4">Contacto</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-geo-alt me-2"></i> Campus Universitario, Edificio de Tecnología</li>
+                        <li class="mb-2"><i class="bi bi-envelope me-2"></i> contacto@skillsengineer.edu</li>
+                        <li class="mb-2"><i class="bi bi-telephone me-2"></i> +123 456 7890</li>
+                        <li><i class="bi bi-clock me-2"></i> Lun - Vie: 8:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2023 <span class="fw-bold">Skill's Engineer</span>. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="btn btn-primary back-to-top" role="button"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+    
+    <script>
+        // Inicializar AOS (Animaciones al hacer scroll)
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+</body>
+</html> 

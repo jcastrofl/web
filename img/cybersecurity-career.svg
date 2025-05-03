@@ -1,0 +1,67 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="600" height="400" fill="#f8f9fa" rx="10" ry="10"/>
+  
+  <!-- Decorative Elements -->
+  <circle cx="100" cy="50" r="30" fill="#4361ee" opacity="0.1"/>
+  <circle cx="500" cy="350" r="40" fill="#4361ee" opacity="0.1"/>
+  <circle cx="550" cy="100" r="25" fill="#4361ee" opacity="0.1"/>
+  <circle cx="50" cy="300" r="20" fill="#4361ee" opacity="0.1"/>
+  
+  <!-- Monitor -->
+  <rect x="200" y="100" width="200" height="150" rx="5" ry="5" fill="#333" stroke="#222" stroke-width="2"/>
+  <rect x="210" y="110" width="180" height="130" fill="#111"/>
+  
+  <!-- Monitor Stand -->
+  <rect x="280" y="250" width="40" height="10" fill="#333"/>
+  <rect x="290" y="260" width="20" height="30" fill="#444"/>
+  <rect x="270" y="290" width="60" height="5" fill="#333"/>
+  
+  <!-- Security Elements on Screen -->
+  <circle cx="300" cy="155" r="40" fill="none" stroke="#4361ee" stroke-width="2"/>
+  <path d="M300 115 L300 195" stroke="#4361ee" stroke-width="2"/>
+  <path d="M260 155 L340 155" stroke="#4361ee" stroke-width="2"/>
+  
+  <!-- Lock Symbol -->
+  <rect x="285" y="145" width="30" height="25" rx="3" ry="3" fill="#4361ee"/>
+  <rect x="290" y="135" width="20" height="15" rx="5" ry="5" fill="#4361ee"/>
+  <circle cx="300" cy="155" r="5" fill="#111"/>
+  <rect x="298" y="155" width="4" height="10" fill="#111"/>
+  
+  <!-- Binary Code -->
+  <text x="220" y="130" font-family="monospace" font-size="8" fill="#4cc9f0">10110101 01101001</text>
+  <text x="220" y="140" font-family="monospace" font-size="8" fill="#4cc9f0">01010111 10101100</text>
+  <text x="220" y="180" font-family="monospace" font-size="8" fill="#4cc9f0">11001010 10010111</text>
+  <text x="220" y="190" font-family="monospace" font-size="8" fill="#4cc9f0">01011100 11010101</text>
+  
+  <!-- Career Path Icons -->
+  <!-- Analyst -->
+  <circle cx="100" cy="150" r="30" fill="#4361ee" opacity="0.8"/>
+  <text x="100" y="155" font-family="Arial" font-size="12" fill="white" text-anchor="middle">Analista</text>
+  
+  <!-- Pentester -->
+  <circle cx="500" cy="150" r="30" fill="#4361ee" opacity="0.8"/>
+  <text x="500" y="155" font-family="Arial" font-size="11" fill="white" text-anchor="middle">Pentester</text>
+  
+  <!-- Forensic -->
+  <circle cx="100" cy="250" r="30" fill="#4361ee" opacity="0.8"/>
+  <text x="100" y="255" font-family="Arial" font-size="12" fill="white" text-anchor="middle">Forense</text>
+  
+  <!-- CISO -->
+  <circle cx="500" cy="250" r="30" fill="#4361ee" opacity="0.8"/>
+  <text x="500" y="255" font-family="Arial" font-size="12" fill="white" text-anchor="middle">CISO</text>
+  
+  <!-- Connection Lines -->
+  <line x1="130" y1="150" x2="260" y2="150" stroke="#4361ee" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="340" y1="150" x2="470" y2="150" stroke="#4361ee" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="130" y1="250" x2="270" y2="250" stroke="#4361ee" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="330" y1="250" x2="470" y2="250" stroke="#4361ee" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="100" y1="180" x2="100" y2="220" stroke="#4361ee" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="500" y1="180" x2="500" y2="220" stroke="#4361ee" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <!-- Title -->
+  <text x="300" y="50" font-family="Arial" font-size="20" font-weight="bold" fill="#333" text-anchor="middle">Carreras en Ciberseguridad</text>
+  
+  <!-- Footer -->
+  <text x="300" y="380" font-family="Arial" font-size="14" fill="#666" text-anchor="middle">TechLearn Academy</text>
+</svg> 

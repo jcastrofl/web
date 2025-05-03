@@ -1,0 +1,27 @@
+# Redireccionar a la carpeta public
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^$ public/ [L]
+    RewriteRule (.*) public/$1 [L]
+</IfModule>
+
+# Si no está disponible mod_rewrite, usar una redirección simple
+<IfModule !mod_rewrite.c>
+    RedirectMatch 302 ^/$ /public/
+</IfModule>
+
+# Prevenir listado de directorios fuera de public
+Options -Indexes
+
+# Proteger archivos sensibles
+<FilesMatch "^\.ht">
+    Order deny,allow
+    Deny from all
+</FilesMatch>
+
+# Seguridad básica
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set X-Frame-Options "SAMEORIGIN"
+</IfModule> 

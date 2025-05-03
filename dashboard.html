@@ -1,0 +1,1848 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Control | Skill's Engineer</title>
+    <meta name="description" content="Panel de control personalizado para estudiantes y administradores de Skill's Engineer">
+    
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    
+    <!-- Animation Libraries -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/professional.css">
+    
+    <!-- Preload -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" as="script">
+    <link rel="preload" href="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js" as="script">
+    
+    <style>
+        /* Estilos para tarjetas de curso */
+        .course-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+        }
+        
+        .course-badge {
+            top: 10px;
+            right: 10px;
+        }
+        
+        .course-progress-indicator {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        
+        /* Estilos para estadísticas */
+        .legend-indicator {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        
+        .icon-circle {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Suavizar esquinas y añadir sombras */
+        .card {
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+        
+        .card-header {
+            border-top-left-radius: 10px !important;
+            border-top-right-radius: 10px !important;
+        }
+        
+        /* Colores de fondo con opacidad */
+        .bg-primary-soft {
+            background-color: rgba(78, 115, 223, 0.1);
+        }
+        
+        .bg-success-soft {
+            background-color: rgba(28, 200, 138, 0.1);
+        }
+        
+        .bg-warning-soft {
+            background-color: rgba(246, 194, 62, 0.1);
+        }
+        
+        .bg-info-soft {
+            background-color: rgba(54, 185, 204, 0.1);
+        }
+        
+        /* Avatar */
+        .avatar {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 500;
+        }
+        
+        .avatar-sm {
+            width: 30px;
+            height: 30px;
+            font-size: 14px;
+        }
+        
+        /* Tarjetas de acciones rápidas */
+        .quick-action-card {
+            border: 1px solid #e3e6f0;
+            border-radius: 10px;
+            transition: all 0.3s;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .quick-action-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            background-color: #f8f9fc;
+        }
+        
+        /* Estilos para dashboard de estudiante */
+        .stat-card {
+            background: white;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stat-icon {
+            display: block;
+            font-size: 2.2rem;
+            color: #4e73df;
+            margin-bottom: 10px;
+        }
+        
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            line-height: 1;
+        }
+        
+        .stat-label {
+            color: #858796;
+            font-size: 0.875rem;
+        }
+        
+        /* Gradiente para la tarjeta principal de admin */
+        .bg-gradient-primary {
+            background: linear-gradient(135deg, #4e73df 0%, #224abe 100%);
+        }
+
+        /* Estilos exclusivos para usuarios Premium */
+        .premium-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: linear-gradient(135deg, #f6c23e 0%, #e6a800 100%);
+            color: #fff;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            box-shadow: 0 4px 10px rgba(246, 194, 62, 0.3);
+            z-index: 100;
+        }
+        
+        .premium-section {
+            display: none; /* Oculto por defecto, se muestra vía JavaScript */
+        }
+        
+        /* Banner premium en la parte superior */
+        .premium-banner {
+            background: linear-gradient(135deg, #f6c23e 0%, #e6a800 100%);
+            border-radius: 10px;
+            color: #fff;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 15px rgba(246, 194, 62, 0.2);
+        }
+        
+        /* Tarjetas con borde dorado para usuarios premium */
+        .premium-card {
+            border: 2px solid #f6c23e !important;
+            box-shadow: 0 8px 25px rgba(246, 194, 62, 0.15) !important;
+        }
+        
+        .premium-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(246, 194, 62, 0.25) !important;
+        }
+        
+        /* Gradiente para los títulos premium */
+        .premium-gradient-text {
+            background: linear-gradient(to right, #f6c23e, #e6a800);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+        }
+        
+        /* Sidebar premium */
+        .premium-sidebar .sidebar-inner {
+            background: linear-gradient(180deg, #fcf4e0 0%, #ffffff 100%);
+            border-right: 1px solid #f6c23e;
+        }
+        
+        .premium-sidebar .sidebar-title span {
+            color: #f6c23e;
+        }
+        
+        /* Botones premium */
+        .btn-premium {
+            background: linear-gradient(135deg, #f6c23e 0%, #e6a800 100%);
+            border: none;
+            color: #fff;
+            box-shadow: 0 4px 10px rgba(246, 194, 62, 0.3);
+        }
+        
+        .btn-premium:hover {
+            background: linear-gradient(135deg, #e6a800 0%, #d69500 100%);
+            color: #fff;
+            box-shadow: 0 6px 15px rgba(246, 194, 62, 0.4);
+        }
+        
+        /* Íconos premium */
+        .premium-icon {
+            color: #f6c23e;
+        }
+        
+        /* ===== NUEVOS ESTILOS PARA SIDEBAR MEJORADO ===== */
+        
+        /* Estilos base para el sidebar */
+        .sidebar {
+            height: calc(100vh - 60px);
+            position: fixed;
+            top: 60px;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+            overflow-y: auto;
+            transition: all 0.3s ease;
+        }
+        
+        .sidebar-inner {
+            background: #ffffff;
+            border-right: 1px solid #e4e4e4;
+            min-height: 100%;
+            padding-bottom: 2rem;
+        }
+        
+        .sidebar-title {
+            font-weight: 700;
+            font-size: 1.25rem;
+            margin-bottom: 0;
+        }
+        
+        .sidebar-title span {
+            color: #4e73df;
+            font-weight: 800;
+        }
+        
+        .sidebar-subtitle {
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            color: #6c757d;
+        }
+        
+        /* Estilos para ítems de navegación */
+        .sidebar .nav-link {
+            padding: 0.625rem 1rem;
+            color: #343a40;
+            font-weight: 500;
+            border-radius: 0.375rem;
+            margin-bottom: 0.25rem;
+            display: flex;
+            align-items: center;
+            transition: all 0.2s;
+        }
+        
+        .sidebar .nav-link i {
+            font-size: 1.1rem;
+            width: 1.5rem;
+            margin-right: 0.75rem;
+            text-align: center;
+            color: #6c757d;
+            transition: all 0.2s;
+        }
+        
+        .sidebar .nav-link:hover {
+            background-color: #f8f9fa;
+            color: #4e73df;
+        }
+        
+        .sidebar .nav-link:hover i {
+            color: #4e73df;
+        }
+        
+        .sidebar .nav-link.active {
+            background-color: #4e73df;
+            color: #ffffff;
+        }
+        
+        .sidebar .nav-link.active i {
+            color: #ffffff;
+        }
+        
+        /* Estilos para etiquetas de sección */
+        .sidebar-heading {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #6c757d;
+            margin-bottom: 0.75rem;
+        }
+        
+        /* Estilos específicos para el sidebar de administrador */
+        .admin-sidebar .sidebar-inner {
+            background: linear-gradient(180deg, #f0f5ff 0%, #ffffff 100%);
+            border-right: 1px solid #4e73df;
+        }
+        
+        .admin-sidebar .sidebar-title span {
+            color: #4e73df;
+        }
+        
+        .admin-only .nav-link i {
+            color: #4e73df;
+        }
+        
+        /* Estilos para indicadores de navegación */
+        .sidebar .badge {
+            margin-left: auto;
+            font-weight: 600;
+            padding: 0.25rem 0.5rem;
+        }
+        
+        /* Animación para ítem activo */
+        .sidebar .nav-link.active {
+            box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15) !important;
+            transform: translateX(5px);
+        }
+        
+        /* Separadores visuales */
+        .sidebar hr {
+            margin: 1rem 0;
+            color: #e3e6f0;
+            opacity: 0.5;
+        }
+        
+        /* Ajustes para modo responsivo */
+        @media (max-width: 991.98px) {
+            .sidebar {
+                width: 100%;
+                position: static;
+                height: auto;
+            }
+            
+            .sidebar-inner {
+                border-right: none;
+                border-bottom: 1px solid #e4e4e4;
+            }
+        }
+        
+        /* ===== CORRECCIONES PARA TARJETAS DE CURSOS ===== */
+        
+        /* Mejoras para las etiquetas de estado */
+        .course-badge {
+            top: 15px !important;
+            right: 15px !important;
+            font-size: 0.75rem !important;
+            padding: 0.35rem 0.65rem !important;
+            z-index: 10 !important;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Mejora en el espaciado del título del curso */
+        .course-card .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+            min-height: 3rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        /* Corrección para la descripción del curso */
+        .course-card .card-text {
+            min-height: 3rem;
+            margin-bottom: 1rem !important;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        /* Mejora para los botones de acción */
+        .course-card .btn {
+            padding: 0.5rem 1.25rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            width: 100%;
+            text-align: center;
+        }
+        
+        /* Igualar la altura de los botones */
+        .course-card .card-footer {
+            padding-top: 1rem !important;
+            padding-bottom: 1.25rem !important;
+        }
+        
+        /* Ajuste para los indicadores de progreso */
+        .course-progress-indicator {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            overflow: hidden;
+        }
+        
+        .course-progress-indicator .progress {
+            border-radius: 0;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Mejora para los indicadores de certificado */
+        .course-certificate-indicator {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 0.75rem;
+        }
+        
+        .course-certificate-indicator .badge {
+            font-weight: 500;
+            padding: 0.35rem 0.65rem;
+        }
+        
+        /* Estructura mejorada para tarjetas de curso */
+        .course-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+        }
+        
+        .course-card .card-body {
+            flex: 1 1 auto;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .course-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.75rem;
+            font-size: 0.8rem;
+        }
+        
+        /* Mejora para sección de mis cursos */
+        .courses-container {
+            margin-top: 1.5rem;
+        }
+        
+        .courses-container .row {
+            margin-left: -0.75rem;
+            margin-right: -0.75rem;
+        }
+        
+        .courses-container .col-md-6,
+        .courses-container .col-xl-4 {
+            padding-left: 0.75rem;
+            padding-right: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* ===== NUEVOS ESTILOS PARA CABECERA MEJORADA ===== */
+        
+        /* Navbar principal mejorado */
+        .main-navbar {
+            background-color: #ffffff;
+            box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+            padding: 0.5rem 1rem;
+            z-index: 1030;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+        }
+        
+        .main-navbar .navbar-brand {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #5a5c69;
+            padding: 0;
+            margin-right: 1rem;
+            letter-spacing: 0.05em;
+        }
+        
+        .main-navbar .navbar-brand span {
+            color: #4e73df;
+            font-weight: 800;
+        }
+        
+        /* Botones y elementos de navegación */
+        .nav-btn {
+            padding: 0.375rem 0.75rem;
+            border-radius: 0.375rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 500;
+            font-size: 0.875rem;
+            transition: all 0.2s;
+            color: #6e707e;
+            background-color: transparent;
+            border: none;
+        }
+        
+        .nav-btn:hover {
+            background-color: rgba(78, 115, 223, 0.1);
+            color: #4e73df;
+        }
+        
+        .nav-btn.active {
+            background-color: #4e73df;
+            color: #ffffff;
+        }
+        
+        .nav-btn i {
+            font-size: 1.1rem;
+            margin-right: 0.5rem;
+        }
+        
+        /* Mejoras para el avatar de usuario en navbar */
+        .user-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s;
+        }
+        
+        .user-dropdown:hover .user-avatar {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+        
+        .user-dropdown .dropdown-menu {
+            margin-top: 0.75rem;
+            border: none;
+            border-radius: 0.5rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175);
+            overflow: hidden;
+        }
+        
+        .user-dropdown .dropdown-menu::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            right: 20px;
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            transform: rotate(45deg);
+            z-index: -1;
+        }
+        
+        .user-dropdown .dropdown-header {
+            padding: 1rem;
+            background: linear-gradient(135deg, #4e73df 0%, #224abe 100%);
+            color: #fff;
+            font-weight: 600;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .user-dropdown .dropdown-item {
+            padding: 0.65rem 1rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+        }
+        
+        .user-dropdown .dropdown-item i {
+            margin-right: 0.75rem;
+            font-size: 1rem;
+            color: #6e707e;
+            transition: all 0.2s;
+        }
+        
+        .user-dropdown .dropdown-item:hover i {
+            color: #4e73df;
+        }
+        
+        /* Notificaciones mejoradas */
+        .notification-badge {
+            position: absolute;
+            top: -2px;
+            right: -2px;
+            font-size: 0.65rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 50%;
+            min-width: 18px;
+            height: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .notification-dropdown .dropdown-menu {
+            width: 300px;
+            padding: 0;
+            overflow: hidden;
+        }
+        
+        .notification-header {
+            background-color: #4e73df;
+            color: #fff;
+            padding: 0.75rem 1rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .notification-list {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        
+        .notification-item {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: flex-start;
+            transition: all 0.2s;
+        }
+        
+        .notification-item:hover {
+            background-color: #f8f9fc;
+        }
+        
+        .notification-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(78, 115, 223, 0.1);
+            color: #4e73df;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 0.75rem;
+            flex-shrink: 0;
+        }
+        
+        .notification-content {
+            flex: 1;
+        }
+        
+        .notification-title {
+            font-weight: 600;
+            font-size: 0.875rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .notification-text {
+            font-size: 0.8125rem;
+            color: #6e707e;
+            margin-bottom: 0.25rem;
+        }
+        
+        .notification-time {
+            font-size: 0.75rem;
+            color: #b7b9cc;
+        }
+        
+        .notification-unread {
+            background-color: rgba(78, 115, 223, 0.05);
+        }
+        
+        .notification-unread::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background-color: #4e73df;
+        }
+        
+        /* Barra de búsqueda mejorada */
+        .search-box {
+            position: relative;
+            max-width: 300px;
+        }
+        
+        .search-input {
+            padding-left: 2.5rem;
+            border-radius: 50px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            background-color: #f8f9fc;
+            transition: all 0.2s;
+        }
+        
+        .search-input:focus {
+            background-color: #fff;
+            box-shadow: 0 0 0 0.25rem rgba(78, 115, 223, 0.25);
+            border-color: #bac8f3;
+        }
+        
+        .search-icon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6e707e;
+            z-index: 10;
+        }
+        
+        /* Banner informativo mejorado */
+        .info-banner {
+            background: linear-gradient(135deg, #36b9cc 0%, #1a8a98 100%);
+            color: #fff;
+            padding: 0.75rem 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1020;
+            margin-top: 60px;
+        }
+        
+        .info-banner p {
+            margin-bottom: 0;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        
+        .info-banner strong {
+            font-weight: 700;
+        }
+        
+        .info-banner i {
+            font-size: 1.1rem;
+            margin-right: 0.5rem;
+        }
+        
+        /* Ajustes para la topbar secundaria */
+        .secondary-navbar {
+            padding: 0.75rem 1.5rem;
+            background-color: #fff;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+        }
+        
+        .page-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #5a5c69;
+            margin-bottom: 0;
+        }
+        
+        .breadcrumb-item {
+            font-size: 0.875rem;
+        }
+        
+        /* Ajustes para el contenido principal */
+        .main-content {
+            padding-top: 60px; /* Altura del navbar principal */
+        }
+        
+        .content-wrapper {
+            padding: 1.5rem;
+        }
+        
+        /* Animaciones para cards y elementos interactivos */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 0.3s ease-in-out forwards;
+        }
+        
+        /* Mejoras para dispositivos móviles */
+        @media (max-width: 767.98px) {
+            .main-navbar {
+                padding: 0.5rem;
+            }
+            
+            .page-title {
+                font-size: 1.25rem;
+            }
+            
+            .secondary-navbar {
+                padding: 0.75rem 1rem;
+            }
+            
+            .search-box {
+                max-width: 100%;
+            }
+            
+            .notification-dropdown .dropdown-menu {
+                width: 280px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar Principal Mejorado -->
+    <nav class="navbar navbar-expand-lg main-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="dashboard.html">
+                <span>Skill's</span> Engineer
+            </a>
+            
+            <!-- Toggler para sidebar en móviles -->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu">
+                <i class="bi bi-list"></i>
+            </button>
+            
+            <!-- Elementos centrales -->
+            <div class="d-none d-md-block mx-auto">
+                <div class="search-box">
+                    <i class="bi bi-search search-icon"></i>
+                    <input type="search" class="form-control search-input" placeholder="Buscar cursos, temas, recursos...">
+                </div>
+            </div>
+            
+            <!-- Elementos a la derecha -->
+            <ul class="navbar-nav align-items-center">
+                <!-- Botón de ayuda rápida -->
+                <li class="nav-item me-2">
+                    <button class="nav-btn" data-bs-toggle="modal" data-bs-target="#helpModal">
+                        <i class="bi bi-question-circle"></i>
+                    </button>
+                </li>
+                
+                <!-- Notificaciones -->
+                <li class="nav-item me-2 dropdown notification-dropdown">
+                    <a class="nav-btn position-relative" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-bell"></i>
+                        <span class="badge bg-danger notification-badge">3</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end animate-fade-in">
+                        <div class="notification-header">
+                            <span>Notificaciones</span>
+                            <a href="#" class="text-white text-decoration-none">
+                                <small>Marcar todas como leídas</small>
+                            </a>
+                        </div>
+                        <div class="notification-list">
+                            <a href="#" class="notification-item notification-unread position-relative">
+                                <div class="notification-icon">
+                                    <i class="bi bi-mortarboard"></i>
+                                </div>
+                                <div class="notification-content">
+                                    <h6 class="notification-title">Nuevo curso disponible</h6>
+                                    <p class="notification-text">Se ha publicado el curso "DevOps Avanzado"</p>
+                                    <span class="notification-time">Hace 10 minutos</span>
+                                </div>
+                            </a>
+                            <a href="#" class="notification-item notification-unread position-relative">
+                                <div class="notification-icon" style="background-color: rgba(28, 200, 138, 0.1); color: #1cc88a;">
+                                    <i class="bi bi-check-circle"></i>
+                                </div>
+                                <div class="notification-content">
+                                    <h6 class="notification-title">¡Actividad completada!</h6>
+                                    <p class="notification-text">Has terminado el módulo 3 de Python</p>
+                                    <span class="notification-time">Hace 3 horas</span>
+                                </div>
+                            </a>
+                            <a href="#" class="notification-item notification-unread position-relative">
+                                <div class="notification-icon" style="background-color: rgba(246, 194, 62, 0.1); color: #f6c23e;">
+                                    <i class="bi bi-calendar-event"></i>
+                                </div>
+                                <div class="notification-content">
+                                    <h6 class="notification-title">Recordatorio de evento</h6>
+                                    <p class="notification-text">Webinar sobre IA comienza en 1 hora</p>
+                                    <span class="notification-time">Hace 30 minutos</span>
+                                </div>
+                            </a>
+                            <a href="#" class="notification-item">
+                                <div class="notification-icon" style="background-color: rgba(231, 74, 59, 0.1); color: #e74a3b;">
+                                    <i class="bi bi-exclamation-circle"></i>
+                                </div>
+                                <div class="notification-content">
+                                    <h6 class="notification-title">Fecha límite próxima</h6>
+                                    <p class="notification-text">Entrega del proyecto final en 3 días</p>
+                                    <span class="notification-time">Ayer</span>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="#" class="dropdown-item text-center small text-gray-500 py-2 border-top">Mostrar todas las notificaciones</a>
+                    </div>
+                    </li>
+                
+                <!-- Mensajes -->
+                <li class="nav-item me-2 dropdown">
+                    <a class="nav-btn position-relative" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-envelope"></i>
+                        <span class="badge bg-success notification-badge">5</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end animate-fade-in" style="width: 300px;">
+                        <h6 class="dropdown-header bg-primary text-white">Mensajes</h6>
+                        <a class="dropdown-item d-flex align-items-center py-2" href="#">
+                            <div class="me-3">
+                                <img src="img/instructor-avatar1.jpg" class="rounded-circle" width="40" height="40" alt="Instructor">
+                            </div>
+                            <div>
+                                <div class="fw-bold">Prof. María González</div>
+                                <div class="small text-muted">Te envió feedback sobre tu último proyecto...</div>
+                                <div class="small text-muted">Hace 15m</div>
+                            </div>
+                        </a>
+                        <a class="dropdown-item d-flex align-items-center py-2" href="#">
+                            <div class="me-3">
+                                <img src="img/instructor-avatar2.jpg" class="rounded-circle" width="40" height="40" alt="Instructor">
+                            </div>
+                            <div>
+                                <div class="fw-bold">Prof. Carlos Ramírez</div>
+                                <div class="small text-muted">Nuevo material disponible para el curso...</div>
+                                <div class="small text-muted">Hace 2h</div>
+                            </div>
+                        </a>
+                        <a href="#" class="dropdown-item text-center small text-gray-500 py-2 border-top">Ver todos los mensajes</a>
+                    </div>
+                </li>
+                
+                <!-- Usuario y perfil -->
+                <li class="nav-item dropdown user-dropdown">
+                    <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="img/user-avatar.jpg" alt="User Avatar" class="user-avatar me-2">
+                        <span class="d-none d-lg-inline text-gray-600 small fw-medium">Juan Pérez</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end animate-fade-in" aria-labelledby="userDropdown">
+                        <h6 class="dropdown-header">
+                            <span id="user-name">Juan Pérez</span><br>
+                            <small id="user-email" class="text-white-50">juan.perez@ejemplo.com</small>
+                        </h6>
+                        <div class="dropdown-item py-2 px-3 mb-1">
+                            <div class="d-flex align-items-center mb-2">
+                                <div class="progress flex-grow-1" style="height: 5px;">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <span class="ms-2 small">75%</span>
+                            </div>
+                            <small class="text-muted">Progreso del perfil</small>
+                        </div>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-person me-2"></i>Mi Perfil</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-mortarboard me-2"></i>Mis Cursos</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-award me-2"></i>Certificaciones</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-gear me-2"></i>Configuración</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="index.html"><i class="bi bi-box-arrow-right me-2"></i>Cerrar Sesión</a></li>
+                        </ul>
+                    </li>
+                </ul>
+        </div>
+    </nav>
+
+    <!-- Banner Informativo Universidad Continental Mejorado -->
+    <div class="info-banner">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-center">
+                <i class="bi bi-award"></i>
+                <p class="mb-0">Proyecto oficial de la <strong>Escuela de Ingeniería de la Universidad Continental</strong> - Modalidad a distancia | Disponible para todos los estudiantes de la universidad</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dashboard Content -->
+    <div class="container-fluid">
+        <div class="row">
+            
+            <!-- Sidebar -->
+            <div class="col-lg-2 px-0 position-fixed sidebar" id="sidebar">
+                <div class="d-flex flex-column p-3 sidebar-inner h-100">
+                    <div class="d-flex align-items-center mb-3">
+                        <a href="index.html" class="text-decoration-none d-flex align-items-center">
+                            <h5 class="sidebar-title mb-0"><span>Skill's</span> Engineer</h5>
+                        </a>
+                        <div id="premium-indicator" class="ms-2" style="display: none;">
+                            <span class="badge bg-warning text-dark px-2 py-1">PREMIUM</span>
+                        </div>
+                    </div>
+                    <div class="user-info mb-3">
+                        <div class="d-flex align-items-center">
+                            <img src="img/user-avatar.jpg" alt="User Avatar" class="rounded-circle me-2" width="40" height="40">
+                            <div>
+                                <h6 class="mb-0 fw-semibold">Juan Pérez</h6>
+                                <p class="text-muted mb-0 small" id="user-role-badge">Estudiante</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <p class="sidebar-subtitle text-uppercase mb-1">Universidad Continental</p>
+                    
+                    <!-- Main navigation -->
+                    <ul class="nav nav-pills flex-column mb-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active">
+                                <i class="bi bi-speedometer2"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        
+                        <!-- Sección de Estudiante -->
+                        <li class="student-section">
+                            <hr class="my-3">
+                            <h6 class="sidebar-heading px-3 mb-2 text-muted">APRENDIZAJE</h6>
+                        </li>
+                        <li class="student-section">
+                            <a href="#cursos-section" class="nav-link">
+                                <i class="bi bi-journal-text"></i>
+                                <span>Mis Cursos</span>
+                            </a>
+                        </li>
+                        <li class="student-section">
+                            <a href="#calendario-section" class="nav-link">
+                                <i class="bi bi-calendar-event"></i>
+                                <span>Calendario</span>
+                            </a>
+                        </li>
+                        <li class="student-section">
+                            <a href="#progreso-section" class="nav-link">
+                                <i class="bi bi-graph-up"></i>
+                                <span>Mi Progreso</span>
+                            </a>
+                        </li>
+                        <li class="student-section">
+                            <a href="#mensajes-section" class="nav-link">
+                                <i class="bi bi-chat-left-text"></i>
+                                <span>Mensajes</span>
+                                <span class="badge rounded-pill bg-danger ms-auto">5</span>
+                            </a>
+                        </li>
+                        <li class="student-section">
+                            <a href="#certificados-section" class="nav-link">
+                                <i class="bi bi-award"></i>
+                                <span>Certificados</span>
+                            </a>
+                        </li>
+                        
+                        <!-- Sección Premium (solo visible para usuarios premium) -->
+                        <li class="premium-section">
+                            <hr class="my-3">
+                            <h6 class="sidebar-heading px-3 mb-2 text-muted">BENEFICIOS PREMIUM</h6>
+                        </li>
+                        <li class="premium-section">
+                            <a href="#mentoria-section" class="nav-link">
+                                <i class="bi bi-people-fill premium-icon"></i>
+                                <span>Mentoría personalizada</span>
+                            </a>
+                        </li>
+                        <li class="premium-section">
+                            <a href="#contenido-exclusivo-section" class="nav-link">
+                                <i class="bi bi-stars premium-icon"></i>
+                                <span>Contenido exclusivo</span>
+                                <span class="badge rounded-pill bg-warning text-dark ms-auto">Nuevo</span>
+                            </a>
+                        </li>
+                        <li class="premium-section">
+                            <a href="#workshops-section" class="nav-link">
+                                <i class="bi bi-camera-video-fill premium-icon"></i>
+                                <span>Talleres en vivo</span>
+                            </a>
+                        </li>
+                        <li class="premium-section">
+                            <a href="#networking-section" class="nav-link">
+                                <i class="bi bi-diagram-3-fill premium-icon"></i>
+                                <span>Networking empresarial</span>
+                            </a>
+                        </li>
+                        
+                        <!-- Sección de Administración (solo visible para administradores) -->
+                        <li class="admin-only" style="display: none;">
+                            <hr class="my-3">
+                            <h6 class="sidebar-heading px-3 mb-2 text-muted">ADMINISTRACIÓN</h6>
+                        </li>
+                        <li class="admin-only" style="display: none;">
+                            <a href="#dashboard-admin-section" class="nav-link">
+                                <i class="bi bi-grid-1x2-fill"></i>
+                                <span>Panel principal</span>
+                            </a>
+                        </li>
+                        <li class="admin-only" style="display: none;">
+                            <a href="#usuarios-section" class="nav-link">
+                                <i class="bi bi-people"></i>
+                                <span>Gestión de Usuarios</span>
+                            </a>
+                        </li>
+                        <li class="admin-only" style="display: none;">
+                            <a href="#cursos-admin-section" class="nav-link">
+                                <i class="bi bi-book"></i>
+                                <span>Gestión de Cursos</span>
+                            </a>
+                        </li>
+                        <li class="admin-only" style="display: none;">
+                            <a href="#reportes-section" class="nav-link">
+                                <i class="bi bi-bar-chart"></i>
+                                <span>Reportes y Estadísticas</span>
+                            </a>
+                        </li>
+                        <li class="admin-only" style="display: none;">
+                            <a href="#ajustes-section" class="nav-link">
+                                <i class="bi bi-sliders"></i>
+                                <span>Ajustes del Sistema</span>
+                            </a>
+                        </li>
+                        
+                        <!-- Configuración y Logout -->
+                        <li>
+                            <hr class="my-3">
+                            <h6 class="sidebar-heading px-3 mb-2 text-muted">CONFIGURACIÓN</h6>
+                        </li>
+                        <li>
+                            <a href="#perfil-section" class="nav-link">
+                                <i class="bi bi-person"></i>
+                                <span>Mi Perfil</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#ajustes-usuario-section" class="nav-link">
+                                <i class="bi bi-gear"></i>
+                                <span>Preferencias</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#soporte-section" class="nav-link">
+                                <i class="bi bi-question-circle"></i>
+                                <span>Ayuda y Soporte</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html" class="nav-link">
+                                <i class="bi bi-box-arrow-left"></i>
+                                <span>Cerrar Sesión</span>
+                            </a>
+                        </li>
+                    </ul>
+                    
+                    <div class="mt-auto pt-3">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <span class="text-muted">v1.2.0</span>
+                            <span class="text-muted">© 2023 Skill's Engineer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Main Content -->
+            <div class="col-lg-10 offset-lg-2 p-0 main-content">
+                <!-- Top navbar -->
+                <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 border-bottom px-4 secondary-navbar">
+                    <div class="container-fluid px-0">
+                        <div class="d-flex align-items-center">
+                            <h1 class="page-title mb-0">Dashboard</h1>
+                        </div>
+                        
+                        <div class="d-flex align-items-center">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb mb-0">
+                                    <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </nav>
+                
+                <!-- Contenido principal del dashboard -->
+                <div class="content-wrapper">
+                    <!-- Bienvenida personalizada -->
+                    <div class="row mb-4">
+                        <div class="col-12">
+                            <div class="card border-0 shadow-sm rounded-3">
+                                <div class="card-body p-4">
+                                    <div class="row align-items-center">
+                                        <div class="col-lg-6">
+                                            <h2 class="fw-bold mb-2" id="welcome-heading">¡Bienvenido de nuevo, Juan!</h2>
+                                            <p class="text-muted mb-3" id="last-login">Último acceso: Hoy, 10:25 AM</p>
+                                            <p class="mb-4">Continúa tu aprendizaje donde lo dejaste. Tienes <span class="fw-bold text-primary" id="pending-activities">3 actividades pendientes</span> para hoy.</p>
+                                            <div class="d-flex flex-wrap gap-2">
+                                                <a href="#" class="btn btn-primary px-4">
+                                                    <i class="bi bi-play-fill me-1"></i> Continuar aprendiendo
+                                                </a>
+                                                <a href="#" class="btn btn-outline-secondary px-4">
+                                                    <i class="bi bi-calendar3 me-1"></i> Ver agenda
+                                                </a>
+                                        </div>
+                                                                </div>
+                                        <div class="col-lg-6 d-none d-lg-block">
+                                            <div class="text-end">
+                                                <img src="img/dashboard-illustration.svg" alt="Dashboard Illustration" class="img-fluid" style="max-height: 200px;">
+                                                            </div>
+                                                                </div>
+                                                                </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                    
+                    <!-- Resumen de progreso -->
+                    <div class="row mb-4">
+                        <!-- Tarjeta de Progreso general -->
+                        <div class="col-md-6 col-xl-3 mb-4">
+                            <div class="card border-left-primary shadow-sm h-100 py-2 rounded-3">
+                                                        <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                Progreso General</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">68%</div>
+                                            <div class="progress progress-sm mt-2">
+                                                <div class="progress-bar bg-primary" role="progressbar" style="width: 68%" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100"></div>
+                                                            </div>
+                                                                </div>
+                                        <div class="col-auto">
+                                            <i class="bi bi-bar-chart-line fs-2 text-primary-soft"></i>
+                                                                </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                        <!-- Tarjeta de Cursos Activos -->
+                        <div class="col-md-6 col-xl-3 mb-4">
+                            <div class="card border-left-success shadow-sm h-100 py-2 rounded-3">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                                Cursos Activos</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">4</div>
+                                            <div class="small text-muted mt-2">2 programación, 1 ciberseguridad, 1 bases de datos</div>
+                                                    </div>
+                                        <div class="col-auto">
+                                            <i class="bi bi-journals fs-2 text-success-soft"></i>
+                                                </div>
+                                            </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                        <!-- Tarjeta de Próximos Eventos -->
+                        <div class="col-md-6 col-xl-3 mb-4">
+                            <div class="card border-left-info shadow-sm h-100 py-2 rounded-3">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                                Próximos Eventos
+                                                                    </div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">2</div>
+                                            <div class="small text-muted mt-2">Webinar IA (hoy), Entrega proyecto (3 días)</div>
+                                                                    </div>
+                                        <div class="col-auto">
+                                            <i class="bi bi-calendar-event fs-2 text-info-soft"></i>
+                                                                </div>
+                                                            </div>
+                                                                </div>
+                                                                    </div>
+                                                                    </div>
+
+                        <!-- Tarjeta de Certificados -->
+                        <div class="col-md-6 col-xl-3 mb-4">
+                            <div class="card border-left-warning shadow-sm h-100 py-2 rounded-3">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                                Certificados Obtenidos</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">3</div>
+                                            <div class="small text-muted mt-2">Último: Python Fundamentals (hace 2 semanas)</div>
+                                                                </div>
+                                        <div class="col-auto">
+                                            <i class="bi bi-award fs-2 text-warning-soft"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                    
+                    <!-- Sección de cursos en progreso y actividad reciente -->
+                    <div class="row">
+                        <!-- Cursos en progreso -->
+                        <div class="col-lg-8 mb-4">
+                            <div class="card shadow-sm border-0 rounded-3 h-100">
+                                <div class="card-header bg-white border-0 pt-4 pb-0">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h5 class="card-title fw-bold mb-0">Mis Cursos en Progreso</h5>
+                                        <a href="#" class="btn btn-sm btn-outline-primary">Ver todos</a>
+                                                                    </div>
+                                                                    </div>
+                                <div class="card-body pt-3">
+                                    <!-- Curso 1 -->
+                                    <div class="course-progress-item d-flex p-3 border rounded-3 mb-3">
+                                        <img src="img/python-logo.png" alt="Python" class="rounded-3 me-3" width="80" height="80">
+                                        <div class="flex-grow-1">
+                                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                                <h6 class="fw-bold mb-0">Python Avanzado: Desarrollo de Aplicaciones</h6>
+                                                <span class="badge bg-primary">75%</span>
+                                                                </div>
+                                            <p class="text-muted small mb-2">Módulo actual: Integración con Bases de Datos</p>
+                                            <div class="progress" style="height: 5px;">
+                                                <div class="progress-bar bg-primary" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between mt-2">
+                                                <small class="text-muted">Última actividad: Ayer</small>
+                                                <a href="#" class="btn btn-sm btn-primary">Continuar</a>
+                                                                </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                    <!-- Curso 2 -->
+                                    <div class="course-progress-item d-flex p-3 border rounded-3 mb-3">
+                                        <img src="img/cybersecurity-logo.png" alt="Ciberseguridad" class="rounded-3 me-3" width="80" height="80">
+                                        <div class="flex-grow-1">
+                                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                                <h6 class="fw-bold mb-0">Fundamentos de Ciberseguridad</h6>
+                                                <span class="badge bg-info">40%</span>
+                                            </div>
+                                            <p class="text-muted small mb-2">Módulo actual: Análisis de Vulnerabilidades</p>
+                                                                    <div class="progress" style="height: 5px;">
+                                                <div class="progress-bar bg-info" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                            <div class="d-flex align-items-center justify-content-between mt-2">
+                                                <small class="text-muted">Última actividad: Hace 3 días</small>
+                                                <a href="#" class="btn btn-sm btn-info">Continuar</a>
+                                                                </div>
+                                                            </div>
+                                    </div>
+                                    
+                                    <!-- Curso 3 -->
+                                    <div class="course-progress-item d-flex p-3 border rounded-3">
+                                        <img src="img/mysql-logo.png" alt="MySQL" class="rounded-3 me-3" width="80" height="80">
+                                        <div class="flex-grow-1">
+                                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                                <h6 class="fw-bold mb-0">Administración de Base de Datos con MySQL</h6>
+                                                <span class="badge bg-success">90%</span>
+                                                                    </div>
+                                            <p class="text-muted small mb-2">Módulo actual: Proyecto Final</p>
+                                            <div class="progress" style="height: 5px;">
+                                                <div class="progress-bar bg-success" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                            <div class="d-flex align-items-center justify-content-between mt-2">
+                                                <small class="text-muted">Última actividad: Hoy</small>
+                                                <a href="#" class="btn btn-sm btn-success">Continuar</a>
+                                                                </div>
+                                                            </div>
+                                                                </div>
+                                                                    </div>
+                                                                    </div>
+                                                                </div>
+                        
+                        <!-- Actividad reciente -->
+                        <div class="col-lg-4 mb-4">
+                            <div class="card shadow-sm border-0 rounded-3 h-100">
+                                <div class="card-header bg-white border-0 pt-4 pb-0">
+                                    <h5 class="card-title fw-bold mb-0">Actividad Reciente</h5>
+                                                    </div>
+                                <div class="card-body pt-3">
+                                    <div class="timeline">
+                                        <!-- Actividad 1 -->
+                                        <div class="timeline-item pb-3 mb-3 border-left-primary">
+                                            <div class="timeline-item-content">
+                                                <span class="timeline-date text-muted small">Hoy, 10:25 AM</span>
+                                                <h6 class="fw-semibold mb-1">Completaste el quiz de Python</h6>
+                                                <p class="text-muted small mb-0">Obtuviste 90/100 en el quiz "Funciones Avanzadas en Python"</p>
+                                                </div>
+                                            </div>
+                                            
+                                        <!-- Actividad 2 -->
+                                        <div class="timeline-item pb-3 mb-3 border-left-info">
+                                            <div class="timeline-item-content">
+                                                <span class="timeline-date text-muted small">Ayer, 5:30 PM</span>
+                                                <h6 class="fw-semibold mb-1">Iniciaste un nuevo módulo</h6>
+                                                <p class="text-muted small mb-0">Módulo "Integración con Bases de Datos" en Python Avanzado</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Actividad 3 -->
+                                        <div class="timeline-item pb-3 border-left-success">
+                                            <div class="timeline-item-content">
+                                                <span class="timeline-date text-muted small">16 Oct, 2:15 PM</span>
+                                                <h6 class="fw-semibold mb-1">Entregaste práctica</h6>
+                                                <p class="text-muted small mb-0">El instructor ha calificado tu práctica de SQL con 18/20</p>
+                                            </div>
+                                                                        </div>
+                                        
+                                        <!-- Actividad 4 -->
+                                        <div class="timeline-item pb-3 border-left-warning">
+                                            <div class="timeline-item-content">
+                                                <span class="timeline-date text-muted small">15 Oct, 11:00 AM</span>
+                                                <h6 class="fw-semibold mb-1">Comentaste en foro</h6>
+                                                <p class="text-muted small mb-0">Tu respuesta en el foro "Mejores prácticas de seguridad" recibió 5 likes</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                    <div class="text-center mt-2">
+                                        <a href="#" class="btn btn-sm btn-outline-secondary">Ver toda la actividad</a>
+                                                                </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                    <!-- Sección de cursos recomendados -->
+                    <div class="row">
+                        <div class="col-12 mb-4">
+                            <div class="card shadow-sm border-0 rounded-3">
+                                <div class="card-header bg-white border-0 pt-4 pb-0">
+                                                            <div class="d-flex justify-content-between align-items-center">
+                                        <h5 class="card-title fw-bold mb-0">Cursos Recomendados Para Ti</h5>
+                                        <a href="#" class="btn btn-sm btn-outline-primary">Ver catálogo completo</a>
+                                                                </div>
+                                                            </div>
+                                <div class="card-body pt-3">
+                                    <div class="row">
+                                        <!-- Curso recomendado 1 -->
+                                        <div class="col-md-6 col-lg-4 mb-4">
+                                            <div class="card h-100 hover-card border-0 shadow-sm rounded-3">
+                                                <img src="img/curso-datascience.jpg" class="card-img-top" alt="Data Science">
+                                                        <div class="card-body">
+                                                    <span class="badge bg-primary mb-2">Ciencia de Datos</span>
+                                                    <h5 class="card-title fw-bold">Fundamentos de Data Science con Python</h5>
+                                                    <p class="card-text text-muted small">Aprende los conceptos fundamentales de la ciencia de datos utilizando Python y sus principales librerías como Pandas, NumPy y Matplotlib.</p>
+                                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                                        <div class="d-flex align-items-center">
+                                                            <i class="bi bi-clock me-1 text-muted"></i>
+                                                            <small class="text-muted">8 semanas</small>
+                                                            </div>
+                                                        <div class="d-flex align-items-center">
+                                                            <i class="bi bi-star-fill me-1 text-warning"></i>
+                                                            <small class="text-muted">4.8 (120)</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer bg-white border-0 pt-0">
+                                                    <a href="#" class="btn btn-primary w-100">Ver detalles</a>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                            
+                                        <!-- Curso recomendado 2 -->
+                                        <div class="col-md-6 col-lg-4 mb-4">
+                                            <div class="card h-100 hover-card border-0 shadow-sm rounded-3">
+                                                <img src="img/curso-devops.jpg" class="card-img-top" alt="DevOps">
+                                                <div class="card-body">
+                                                    <span class="badge bg-info mb-2">DevOps</span>
+                                                    <h5 class="card-title fw-bold">DevOps: CI/CD con Jenkins y Docker</h5>
+                                                    <p class="card-text text-muted small">Aprende a implementar pipelines de integración y despliegue continuo utilizando Jenkins, Docker y otras herramientas DevOps.</p>
+                                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                                                                <div class="d-flex align-items-center">
+                                                            <i class="bi bi-clock me-1 text-muted"></i>
+                                                            <small class="text-muted">10 semanas</small>
+                                                                                </div>
+                                                                                <div class="d-flex align-items-center">
+                                                            <i class="bi bi-star-fill me-1 text-warning"></i>
+                                                            <small class="text-muted">4.7 (95)</small>
+                                                                                    </div>
+                                                                                </div>
+                                                                                </div>
+                                                <div class="card-footer bg-white border-0 pt-0">
+                                                    <a href="#" class="btn btn-info text-white w-100">Ver detalles</a>
+                                                                                </div>
+                                                                                    </div>
+                                                                                </div>
+                                        
+                                        <!-- Curso recomendado 3 -->
+                                        <div class="col-md-6 col-lg-4 mb-4">
+                                            <div class="card h-100 hover-card border-0 shadow-sm rounded-3">
+                                                <img src="img/curso-cloud.jpg" class="card-img-top" alt="Cloud Computing">
+                                                <div class="card-body">
+                                                    <span class="badge bg-success mb-2">Cloud Computing</span>
+                                                    <h5 class="card-title fw-bold">Arquitectura de Soluciones en AWS</h5>
+                                                    <p class="card-text text-muted small">Diseña arquitecturas escalables, seguras y de alta disponibilidad en Amazon Web Services (AWS) para aplicaciones modernas.</p>
+                                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                                                                <div class="d-flex align-items-center">
+                                                            <i class="bi bi-clock me-1 text-muted"></i>
+                                                            <small class="text-muted">12 semanas</small>
+                                                                                </div>
+                                                                                <div class="d-flex align-items-center">
+                                                            <i class="bi bi-star-fill me-1 text-warning"></i>
+                                                            <small class="text-muted">4.9 (150)</small>
+                                                                                    </div>
+                                                                                </div>
+                                                                                </div>
+                                                <div class="card-footer bg-white border-0 pt-0">
+                                                    <a href="#" class="btn btn-success w-100">Ver detalles</a>
+                                                            </div>
+                                                        </div>
+                                                            </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                    <!-- Sección para contenido específico por tipo de usuario -->
+                    <!-- Sección Premium (visible solo para usuarios premium) -->
+                    <div class="row premium-section" id="premium-features">
+                        <div class="col-12 mb-4">
+                            <div class="premium-banner rounded-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="premium-icon-circle me-3">
+                                        <i class="bi bi-star-fill fs-3"></i>
+                                                                        </div>
+                                                                        <div>
+                                        <h5 class="fw-bold mb-1">Beneficios Premium Exclusivos</h5>
+                                        <p class="mb-0">Disfruta de contenido exclusivo, mentoría personalizada y más beneficios como suscriptor premium.</p>
+                                                                        </div>
+                                    <div class="ms-auto">
+                                        <a href="#" class="btn btn-light btn-sm px-4">Explorar beneficios</a>
+                                                                    </div>
+                                                                </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                    <!-- Sección de Administrador (visible solo para administradores) -->
+                    <div class="row admin-section" id="admin-dashboard" style="display: none;">
+                        <div class="col-12 mb-4">
+                            <div class="card border-0 shadow-sm bg-gradient-primary text-white rounded-3">
+                                                            <div class="card-body p-4">
+                                                                        <div class="d-flex justify-content-between align-items-center">
+                                                                            <div>
+                                            <h5 class="fw-bold mb-1">Panel de Administración</h5>
+                                            <p class="mb-0">Gestiona usuarios, cursos y configura la plataforma desde este panel.</p>
+                                                                            </div>
+                                                                                <div>
+                                            <a href="#" class="btn btn-light btn-sm px-4">Ir al Panel</a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                            </div>
+                                                                                </div>
+                
+                    <!-- Footer del dashboard -->
+                    <footer class="mt-5 mb-3">
+                        <div class="row">
+                            <div class="col-12">
+                                                                        <div class="d-flex justify-content-between align-items-center">
+                                    <p class="text-muted small mb-0">&copy; 2023 <span class="fw-bold">Skill's Engineer</span>. Todos los derechos reservados.</p>
+                                    <div>
+                                        <a href="#" class="text-muted small me-3">Política de Privacidad</a>
+                                        <a href="#" class="text-muted small me-3">Términos de Servicio</a>
+                                        <a href="#" class="text-muted small">Contacto</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                    </footer>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-bottom text-center">
+                <p class="mb-0">&copy; 2023 Skill's Engineer. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notifications Modal -->
+    <div class="modal fade" id="notificationsModal" tabindex="-1" aria-labelledby="notificationsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="notificationsModalLabel">Notificaciones</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex align-items-center py-3">
+                            <div class="flex-shrink-0 me-3">
+                                <div class="avatar-circle bg-primary text-white">
+                                    <i class="bi bi-bell-fill"></i>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h6 class="mb-1">Nuevo material disponible</h6>
+                                <p class="text-muted mb-0 small">Se ha agregado nuevo material al curso de Ethical Hacking y Pentesting.</p>
+                                <span class="text-muted small">Hace 2 horas</span>
+                            </div>
+                            <div class="flex-shrink-0 ms-2">
+                                <span class="badge bg-primary rounded-pill">Nuevo</span>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center py-3">
+                            <div class="flex-shrink-0 me-3">
+                                <div class="avatar-circle bg-danger text-white">
+                                    <i class="bi bi-calendar-event-fill"></i>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h6 class="mb-1">Recordatorio: entrega de proyecto</h6>
+                                <p class="text-muted mb-0 small">La entrega del proyecto de pentesting es en 3 días.</p>
+                                <span class="text-muted small">Hace 5 horas</span>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center py-3">
+                            <div class="flex-shrink-0 me-3">
+                                <div class="avatar-circle bg-success text-white">
+                                    <i class="bi bi-chat-left-text-fill"></i>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h6 class="mb-1">Mensaje del instructor</h6>
+                                <p class="text-muted mb-0 small">Tienes un nuevo mensaje de la instructora Ing. Laura Gutiérrez.</p>
+                                <span class="text-muted small">Ayer</span>
+                            </div>
+                            <div class="flex-shrink-0 ms-2">
+                                <span class="badge bg-primary rounded-pill">Nuevo</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-link text-decoration-none">Ver todas las notificaciones</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Inicializar AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Determinar el tipo de usuario (simulado - en producción vendría del backend)
+            // Opciones: 'student', 'premium', 'admin'
+            const userType = 'student'; // Cambiar para probar diferentes vistas
+            
+            // Configurar la UI según el tipo de usuario
+            setupUserInterface(userType);
+            
+            // Inicializar tooltips y popovers de Bootstrap
+            const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+            
+            // Inicializar efectos de tarjetas
+            initializeCardEffects();
+        });
+        
+        /**
+         * Configura la interfaz según el tipo de usuario
+         */
+        function setupUserInterface(userType) {
+            // Elementos de UI para diferentes tipos de usuario
+            const premiumElements = document.querySelectorAll('.premium-section');
+            const adminElements = document.querySelectorAll('.admin-section, .admin-only');
+            const studentElements = document.querySelectorAll('.student-section');
+            
+            // Ocultar todos por defecto
+            premiumElements.forEach(el => el.style.display = 'none');
+            adminElements.forEach(el => el.style.display = 'none');
+            
+            // Mostrar elementos según el tipo de usuario
+            if (userType === 'premium') {
+                premiumElements.forEach(el => el.style.display = 'block');
+                document.body.classList.add('premium-user');
+                document.getElementById('premium-indicator').style.display = 'block';
+                document.getElementById('user-role-badge').textContent = 'Estudiante Premium';
+                document.getElementById('sidebar').classList.add('premium-sidebar');
+            } else if (userType === 'admin') {
+                adminElements.forEach(el => el.style.display = 'block');
+                document.body.classList.add('admin-user');
+                document.getElementById('user-role-badge').textContent = 'Administrador';
+                document.getElementById('sidebar').classList.add('admin-sidebar');
+            }
+            
+            // Actualizar el saludo con el nombre del usuario
+            updateWelcomeMessage(userType);
+        }
+        
+        /**
+         * Actualiza el mensaje de bienvenida personalizado
+         */
+        function updateWelcomeMessage(userType) {
+            const welcomeHeading = document.getElementById('welcome-heading');
+            const userName = 'Juan'; // En producción, obtener del backend
+            
+            if (welcomeHeading) {
+                if (userType === 'premium') {
+                    welcomeHeading.innerHTML = `¡Bienvenido de nuevo, <span class="premium-gradient-text">${userName}</span>!`;
+                } else if (userType === 'admin') {
+                    welcomeHeading.innerHTML = `¡Bienvenido, Admin ${userName}!`;
+                } else {
+                    welcomeHeading.innerHTML = `¡Bienvenido de nuevo, ${userName}!`;
+                }
+            }
+        }
+        
+        /**
+         * Inicializa efectos de hover y animaciones para tarjetas
+         */
+        function initializeCardEffects() {
+            const courseCards = document.querySelectorAll('.course-card, .hover-card');
+            
+            courseCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.classList.add('shadow');
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.classList.remove('shadow');
+                });
+            });
+        }
+        
+        /**
+         * Implementa navegación de "Single Page Application" para las secciones del sidebar
+         */
+        document.querySelectorAll('.sidebar .nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                // Solo para enlaces que apuntan a secciones internas con #
+                if (this.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                    
+                    // Remover clase active de todos los enlaces
+                    document.querySelectorAll('.sidebar .nav-link').forEach(el => {
+                        el.classList.remove('active');
+                    });
+                    
+                    // Añadir clase active al enlace clickeado
+                    this.classList.add('active');
+                    
+                    // Mostrar sección correspondiente (en una implementación real)
+                    // aquí cargarías el contenido o cambiarías la vista
+                    
+                    // En versión móvil, cerrar el menú después de hacer clic
+                    const sidebarMenu = document.getElementById('sidebarMenu');
+                    if (sidebarMenu && window.innerWidth < 992) {
+                        const bsCollapse = bootstrap.Collapse.getInstance(sidebarMenu);
+                        if (bsCollapse) bsCollapse.hide();
+                    }
+                }
+            });
+        });
+        
+        // Crear gráficos simulados (para la demo)
+        if (document.getElementById('activityChart')) {
+            const ctx = document.getElementById('activityChart').getContext('2d');
+            new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ['Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb', 'Dom'],
+                        datasets: [{
+                            label: 'Horas de estudio',
+                        data: [3, 2.5, 4, 1, 5, 3.5, 7],
+                        backgroundColor: 'rgba(78, 115, 223, 0.1)',
+                            borderColor: '#4e73df',
+                            borderWidth: 2,
+                            tension: 0.3,
+                        pointBackgroundColor: '#fff',
+                        pointBorderColor: '#4e73df',
+                        pointBorderWidth: 2,
+                        pointRadius: 4
+                        }]
+                    },
+                    options: {
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                grid: {
+                                    drawBorder: false
+                                }
+                            },
+                            x: {
+                                grid: {
+                                    display: false
+                                }
+                            }
+                    },
+                        plugins: {
+                            legend: {
+                                display: false
+                            }
+                        }
+                    }
+                });
+        }
+    </script>
+</body>
+</html> 

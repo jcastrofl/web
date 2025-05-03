@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill's Engineer - Capacitación Especializada en Tecnología</title>
+    <!-- Preconexiones para optimización -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Estilos principales -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <!-- Librerías de animación -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
+    
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/professional.css">
+    
+    <!-- Preload de librerías JavaScript para mejor rendimiento -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" as="script">
+    <link rel="preload" href="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js" as="script">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span>Skill's</span> Engineer
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Cursos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="ciberseguridad.html">Ciberseguridad</a></li>
+                            <li><a class="dropdown-item" href="bases-datos.html">Bases de Datos</a></li>
+                            <li><a class="dropdown-item" href="programacion.html">Programación</a></li>
+                            <li><a class="dropdown-item" href="gestion-ti.html">Gestión de TI</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white ms-3 px-4" href="acceso.html">Acceder</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner Informativo Universidad Continental -->
+    <div class="uc-banner py-2 text-white">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-center">
+                <i class="bi bi-award me-2"></i>
+                <p class="mb-0 fw-semibold">Proyecto oficial de la <strong>Escuela de Ingeniería de la Universidad Continental</strong> - Modalidad a distancia | Disponible para todos los estudiantes de la universidad</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero-section text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-lg-start hero-content" data-aos="fade-right" data-aos-duration="1000">
+                    <h1>Transforma tu <span class="text-gradient-accent">futuro</span> con habilidades tecnológicas</h1>
+                    <p class="lead mb-4">Accede a cursos especializados en <span class="typed-element" data-typed-strings="Ciberseguridad,Bases de Datos,Programación,Gestión de TI"></span> diseñados para estudiantes de la Universidad Continental.</p>
+                    <div class="d-flex flex-wrap gap-2 justify-content-lg-start justify-content-center">
+                        <a href="#cursos" class="btn btn-light hero-btn animate-up">Explorar Cursos</a>
+                        <a href="acceso.html#register" class="btn btn-outline-light hero-btn animate-up delay-200">Registrarse</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0 animate-zoom" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <img src="img/hero-image.svg" alt="Estudiantes aprendiendo" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section class="py-5 bg-texture">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">¿Por qué elegir <span class="text-gradient">Skill's Engineer</span>?</h2>
+                <p class="lead text-muted">Formación de calidad diseñada para tu éxito profesional</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4 animate-up" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon mb-4">
+                                <i class="bi bi-laptop fs-2"></i>
+                            </div>
+                            <h3 class="h5 card-title">Instructores Expertos</h3>
+                            <p class="card-text">Aprende con profesionales que trabajan en las empresas más innovadoras del sector tecnológico.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 animate-up delay-200" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon mb-4">
+                                <i class="bi bi-journal-code fs-2"></i>
+                            </div>
+                            <h3 class="h5 card-title">Contenido Actualizado</h3>
+                            <p class="card-text">Nuestros cursos se actualizan constantemente para reflejar las últimas tendencias y tecnologías.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 animate-up delay-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon mb-4">
+                                <i class="bi bi-people fs-2"></i>
+                            </div>
+                            <h3 class="h5 card-title">Comunidad Activa</h3>
+                            <p class="card-text">Forma parte de una comunidad de estudiantes y profesionales con quienes podrás compartir conocimientos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="cursos" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Nuestros <span class="text-gradient">Cursos</span></h2>
+                <p class="lead text-muted">Explora nuestras áreas de especialización</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="course-card">
+                        <div class="course-img-wrapper">
+                            <img src="img/ciberseguridad.jpg" alt="Curso de Ciberseguridad">
+                            <div class="course-category">Especialidad</div>
+                            <button class="demo-btn" data-bs-toggle="modal" data-bs-target="#demoModal" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ">
+                                <i class="bi bi-play-fill"></i>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Ciberseguridad</h5>
+                            <p class="card-text">Aprende a proteger sistemas, redes y datos contra ataques digitales y vulnerabilidades.</p>
+                            <a href="ciberseguridad.html" class="btn btn-primary w-100">Ver cursos</a>
+                        </div>
+                        <div class="course-meta">
+                            <div class="course-meta-item">
+                                <i class="bi bi-book"></i>
+                                <span>7 cursos</span>
+                            </div>
+                            <div class="course-meta-item">
+                                <i class="bi bi-people"></i>
+                                <span>320 estudiantes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="course-card">
+                        <div class="course-img-wrapper">
+                            <img src="img/bases-datos.jpg" alt="Curso de Bases de Datos">
+                            <div class="course-category">Especialidad</div>
+                            <button class="demo-btn" data-bs-toggle="modal" data-bs-target="#demoModal" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ">
+                                <i class="bi bi-play-fill"></i>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Bases de Datos</h5>
+                            <p class="card-text">Domina el diseño, implementación y gestión de bases de datos SQL y NoSQL.</p>
+                            <a href="bases-datos.html" class="btn btn-primary w-100">Ver cursos</a>
+                        </div>
+                        <div class="course-meta">
+                            <div class="course-meta-item">
+                                <i class="bi bi-book"></i>
+                                <span>5 cursos</span>
+                            </div>
+                            <div class="course-meta-item">
+                                <i class="bi bi-people"></i>
+                                <span>280 estudiantes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="course-card">
+                        <div class="course-img-wrapper">
+                            <img src="img/programacion.jpg" alt="Curso de Programación">
+                            <div class="course-category">Especialidad</div>
+                            <button class="demo-btn" data-bs-toggle="modal" data-bs-target="#demoModal" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ">
+                                <i class="bi bi-play-fill"></i>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Programación</h5>
+                            <p class="card-text">Desarrolla habilidades en diversos lenguajes y frameworks para crear aplicaciones modernas.</p>
+                            <a href="programacion.html" class="btn btn-primary w-100">Ver cursos</a>
+                        </div>
+                        <div class="course-meta">
+                            <div class="course-meta-item">
+                                <i class="bi bi-book"></i>
+                                <span>8 cursos</span>
+                            </div>
+                            <div class="course-meta-item">
+                                <i class="bi bi-people"></i>
+                                <span>410 estudiantes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="course-card">
+                        <div class="course-img-wrapper">
+                            <img src="img/gestion-ti.jpg" alt="Curso de Gestión de TI">
+                            <div class="course-category">Especialidad</div>
+                            <button class="demo-btn" data-bs-toggle="modal" data-bs-target="#demoModal" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ">
+                                <i class="bi bi-play-fill"></i>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Gestión de TI</h5>
+                            <p class="card-text">Prepárate para liderar equipos y proyectos tecnológicos con metodologías ágiles.</p>
+                            <a href="gestion-ti.html" class="btn btn-primary w-100">Ver cursos</a>
+                        </div>
+                        <div class="course-meta">
+                            <div class="course-meta-item">
+                                <i class="bi bi-book"></i>
+                                <span>6 cursos</span>
+                            </div>
+                            <div class="course-meta-item">
+                                <i class="bi bi-people"></i>
+                                <span>290 estudiantes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5 bg-texture">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Experiencias de nuestros <span class="text-gradient">estudiantes</span></h2>
+                <p class="lead text-muted">Descubre cómo nuestros cursos han impulsado carreras profesionales</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <div class="col-md-6 animate-left" data-aos="fade-right">
+                                        <div class="testimonial-item">
+                                            <img src="img/testimonial-1.jpg" class="rounded-circle" alt="Laura Mendoza">
+                                            <h5>Laura Mendoza</h5>
+                                            <p class="text-muted">Estudiante de Ingeniería</p>
+                                            <div class="rating mb-3">
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                            <p>"Los cursos de ciberseguridad me ayudaron a conseguir mi primera pasantía en una importante empresa de tecnología. Los instructores son excelentes y el contenido muy práctico."</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 animate-right" data-aos="fade-left">
+                                        <div class="testimonial-item">
+                                            <img src="img/testimonial-2.jpg" class="rounded-circle" alt="Carlos Ramírez">
+                                            <h5>Carlos Ramírez</h5>
+                                            <p class="text-muted">Desarrollador Junior</p>
+                                            <div class="rating mb-3">
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-half"></i>
+                                            </div>
+                                            <p>"El curso de bases de datos me dio las herramientas que necesitaba para destacar en mi trabajo actual. Muy completo y con excelentes ejercicios prácticos."</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="testimonial-item">
+                                            <img src="img/testimonial-3.jpg" class="rounded-circle" alt="Ana Martínez">
+                                            <h5>Ana Martínez</h5>
+                                            <p class="text-muted">Líder de Proyectos</p>
+                                            <div class="rating mb-3">
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                            <p>"Los cursos de gestión de TI transformaron mi carrera y me ayudaron a conseguir un ascenso. La metodología de enseñanza es excelente y el soporte de los profesores es constante."</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="testimonial-item">
+                                            <img src="img/testimonial-4.jpg" class="rounded-circle" alt="Pedro González">
+                                            <h5>Pedro González</h5>
+                                            <p class="text-muted">Especialista en Seguridad</p>
+                                            <div class="rating mb-3">
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                            <p>"Gracias a la certificación en ciberseguridad pude reorientar mi carrera profesional. El material didáctico y los laboratorios prácticos son de primer nivel."</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center mt-4">
+                            <button class="btn btn-sm btn-primary mx-1" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                                <i class="bi bi-arrow-left"></i>
+                            </button>
+                            <button class="btn btn-sm btn-primary mx-1" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                                <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center" data-aos="fade-up">
+                <div class="col-md-3 col-6 mb-4 mb-md-0">
+                    <div class="stat-card animate-zoom">
+                        <i class="bi bi-person-check stat-icon"></i>
+                        <div class="stat-value" data-count="1300">0</div>
+                        <div class="stat-label">Estudiantes</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4 mb-md-0">
+                    <div class="stat-card animate-zoom delay-200">
+                        <i class="bi bi-journal-richtext stat-icon"></i>
+                        <div class="stat-value" data-count="26">0</div>
+                        <div class="stat-label">Cursos</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-card animate-zoom delay-400">
+                        <i class="bi bi-award stat-icon"></i>
+                        <div class="stat-value" data-count="720">0</div>
+                        <div class="stat-label">Certificados</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-card animate-zoom delay-600">
+                        <i class="bi bi-laptop stat-icon"></i>
+                        <div class="stat-value" data-count="12">0</div>
+                        <div class="stat-label">Instructores</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content text-center" data-aos="fade-up">
+                <h2>¿Listo para impulsar tu carrera en tecnología?</h2>
+                <p>Regístrate hoy y comienza tu camino hacia el éxito profesional con Skill's Engineer</p>
+                <a href="acceso.html#register" class="cta-btn">Comenzar ahora</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Code Access Section -->
+    <section class="py-5 bg-texture">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 animate-left" data-aos="fade-right">
+                    <h2 class="section-title">¿Ya eres <span class="text-gradient">estudiante</span>?</h2>
+                    <p class="lead">Accede a tus cursos con tu código de estudiante y continúa con tu aprendizaje desde donde lo dejaste.</p>
+                    <p>Como estudiante registrado, tienes acceso completo a todos los módulos de los cursos en los que estás matriculado, incluyendo:</p>
+                    <ul class="check-list">
+                        <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Materiales didácticos actualizados</li>
+                        <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Laboratorios prácticos virtuales</li>
+                        <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Evaluaciones y ejercicios</li>
+                        <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Foros de discusión con compañeros e instructores</li>
+                    </ul>
+                    <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#codeAccessModal">
+                        Ingresar con código de acceso
+                    </button>
+                </div>
+                <div class="col-lg-6 animate-right" data-aos="fade-left">
+                    <img src="img/student-dashboard.svg" alt="Panel de estudiante" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <a class="footer-brand" href="index.html">
+                        <span>Skill's</span> Engineer
+                    </a>
+                    <p class="mb-3">Formando profesionales en tecnología con los conocimientos más actualizados y relevantes para el mercado laboral actual.</p>
+                    <p class="fw-bold mb-3">Una iniciativa oficial de la <strong>Escuela de Ingeniería de la Universidad Continental</strong> - Modalidad a distancia, disponible para todos los estudiantes universitarios.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5>Enlaces rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="cursos.html">Cursos</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5>Áreas</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="ciberseguridad.html">Ciberseguridad</a></li>
+                        <li><a href="bases-datos.html">Bases de Datos</a></li>
+                        <li><a href="programacion.html">Programación</a></li>
+                        <li><a href="gestion-ti.html">Gestión de TI</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5>Contacto</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-geo-alt me-2"></i> Campus Universitario, Edificio de Tecnología</li>
+                        <li><i class="bi bi-envelope me-2"></i> contacto@skillsengineer.edu</li>
+                        <li><i class="bi bi-telephone me-2"></i> +123 456 7890</li>
+                        <li><i class="bi bi-clock me-2"></i> Lun - Vie: 8:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                <p class="mb-0">&copy; 2023 Skill's Engineer. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="btn back-to-top" role="button"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- Demo Video Modal -->
+    <div class="modal fade video-modal" id="demoModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <button type="button" class="btn-close position-absolute top-0 end-0 p-3 bg-white rounded-circle shadow-sm m-2 z-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="video-container">
+                        <iframe id="videoFrame" src="" title="Demo del curso" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Code Access Modal -->
+    <div class="modal fade code-access-modal" id="codeAccessModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Acceso con código de estudiante</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-center">Ingresa tu código de estudiante para acceder a tus cursos</p>
+                    <form id="codeAccessForm">
+                        <div class="mb-4">
+                            <input type="text" class="form-control code-input" id="studentCodeInput" placeholder="XXXXXXX" maxlength="7" required>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn code-submit-btn w-100">Acceder</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Librerías de animación y efectos -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.3/smooth-scroll.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+    
+    <!-- Scripts personalizados -->
+    <script src="js/script.js"></script>
+    <script src="js/professional.js"></script>
+</body>
+</html> 

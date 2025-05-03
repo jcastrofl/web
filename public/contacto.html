@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Skill's Engineer</title>
+    <!-- Preconexiones para optimización -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Estilos principales -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <!-- Librerías de animación -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
+    
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/professional.css">
+    
+    <!-- Preload de librerías JavaScript para mejor rendimiento -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" as="script">
+    <link rel="preload" href="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js" as="script">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span>Skill's</span> Engineer
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Cursos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="ciberseguridad.html">Ciberseguridad</a></li>
+                            <li><a class="dropdown-item" href="bases-datos.html">Bases de Datos</a></li>
+                            <li><a class="dropdown-item" href="programacion.html">Programación</a></li>
+                            <li><a class="dropdown-item" href="gestion-ti.html">Gestión de TI</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white ms-3 px-4" href="acceso.html">Acceder</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner Informativo Universidad Continental -->
+    <div class="uc-banner py-2 text-white">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-center">
+                <i class="bi bi-award me-2"></i>
+                <p class="mb-0 fw-semibold">Proyecto oficial de la <strong>Escuela de Ingeniería de la Universidad Continental</strong> - Modalidad a distancia | Disponible para todos los estudiantes de la universidad</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Banner -->
+    <header class="contact-banner" style="background-image: url('img/contact-banner.jpg');">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center text-white contact-content">
+                    <h1 class="display-4 fw-bold mb-3">Contáctanos</h1>
+                    <p class="lead mb-4">Estamos aquí para responder tus preguntas y ayudarte en tu camino de aprendizaje</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contact Info Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm text-center">
+                        <div class="card-body p-4">
+                            <div class="contact-icon bg-primary text-white rounded-circle mx-auto mb-4">
+                                <i class="bi bi-geo-alt fs-3"></i>
+                            </div>
+                            <h3 class="h4 mb-3">Ubicación</h3>
+                            <p class="text-muted mb-0">Campus Universitario<br>Edificio de Tecnología<br>Ciudad Universitaria<br>C.P. 28040</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm text-center">
+                        <div class="card-body p-4">
+                            <div class="contact-icon bg-primary text-white rounded-circle mx-auto mb-4">
+                                <i class="bi bi-envelope fs-3"></i>
+                            </div>
+                            <h3 class="h4 mb-3">Correo Electrónico</h3>
+                            <p class="text-muted mb-2">Información General:</p>
+                            <p class="mb-2"><a href="mailto:contacto@skillsengineer.edu" class="text-primary text-decoration-none">contacto@skillsengineer.edu</a></p>
+                            <p class="text-muted mb-2">Admisiones:</p>
+                            <p class="mb-0"><a href="mailto:admisiones@skillsengineer.edu" class="text-primary text-decoration-none">admisiones@skillsengineer.edu</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm text-center">
+                        <div class="card-body p-4">
+                            <div class="contact-icon bg-primary text-white rounded-circle mx-auto mb-4">
+                                <i class="bi bi-telephone fs-3"></i>
+                            </div>
+                            <h3 class="h4 mb-3">Teléfono</h3>
+                            <p class="text-muted mb-2">Información y Asesoría:</p>
+                            <p class="mb-2"><a href="tel:+123456789" class="text-primary text-decoration-none">+123 456 7890</a></p>
+                            <p class="text-muted mb-2">Soporte Técnico:</p>
+                            <p class="mb-0"><a href="tel:+123456789" class="text-primary text-decoration-none">+123 456 7891</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form & Map Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4">Envíanos un mensaje</h2>
+                    <p class="text-muted mb-4">Completa el siguiente formulario y un asesor académico se pondrá en contacto contigo a la brevedad para resolver tus dudas.</p>
+                    
+                    <form class="contact-form">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="floatingName" placeholder="Nombre">
+                                    <label for="floatingName">Nombre completo</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control" id="floatingEmail" placeholder="Correo electrónico">
+                                    <label for="floatingEmail">Correo electrónico</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating mb-3">
+                                    <input type="tel" class="form-control" id="floatingPhone" placeholder="Teléfono">
+                                    <label for="floatingPhone">Teléfono</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating mb-3">
+                                    <select class="form-select" id="floatingSelect" aria-label="Área de interés">
+                                        <option selected disabled>Selecciona una opción</option>
+                                        <option value="1">Ciberseguridad</option>
+                                        <option value="2">Bases de Datos</option>
+                                        <option value="3">Programación</option>
+                                        <option value="4">Gestión de TI</option>
+                                        <option value="5">Otras áreas</option>
+                                    </select>
+                                    <label for="floatingSelect">Área de interés</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" placeholder="Escribe tu mensaje" id="floatingTextarea" style="height: 150px"></textarea>
+                            <label for="floatingTextarea">Mensaje</label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" value="" id="privacyCheck">
+                            <label class="form-check-label" for="privacyCheck">
+                                He leído y acepto la <a href="#" class="text-decoration-none">política de privacidad</a>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary py-3 px-4">
+                            <i class="bi bi-send me-2"></i>Enviar mensaje
+                        </button>
+                    </form>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4">Nuestra ubicación</h2>
+                    <p class="text-muted mb-4">Visítanos en nuestro campus principal. Contamos con instalaciones modernas y estacionamiento para estudiantes y visitantes.</p>
+                    
+                    <!-- Map -->
+                    <div class="map-container mb-4 rounded overflow-hidden shadow">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.678901234567!2d-3.7034!3d40.4168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDI1JzI0LjAiTiA0McKwNDInMTIuMCJX!5e0!3m2!1ses!2ses!4v1234567890!5m2!1ses!2ses" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    
+                    <!-- Hours -->
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <h3 class="h5 mb-3"><i class="bi bi-clock me-2 text-primary"></i>Horarios de atención</h3>
+                            <div class="row mb-2">
+                                <div class="col-5">Lunes a viernes:</div>
+                                <div class="col-7 text-end fw-bold">8:00 AM - 6:00 PM</div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-5">Sábados:</div>
+                                <div class="col-7 text-end fw-bold">9:00 AM - 1:00 PM</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-5">Domingos:</div>
+                                <div class="col-7 text-end fw-bold">Cerrado</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="fw-bold text-center mb-5">Preguntas frecuentes</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item border-0 shadow-sm mb-3">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    ¿Cómo puedo inscribirme en un curso?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Para inscribirte en un curso, simplemente navega a la página del curso que te interesa y haz clic en el botón "Inscribirme". También puedes contactarnos directamente por teléfono o correo electrónico y un asesor te guiará en el proceso de inscripción.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 shadow-sm mb-3">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    ¿Ofrecen modalidades de estudio online?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Sí, ofrecemos modalidades de estudio presencial, online y semipresencial para adaptarnos a tus necesidades. Nuestros cursos online utilizan plataformas interactivas y sesiones en vivo para garantizar una experiencia de aprendizaje completa.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 shadow-sm mb-3">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    ¿Cuáles son las formas de pago disponibles?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Aceptamos diversas formas de pago, incluyendo tarjetas de crédito/débito, transferencia bancaria y pago en efectivo en nuestras instalaciones. También ofrecemos planes de financiamiento y becas para estudiantes que cumplan con ciertos requisitos.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 shadow-sm mb-3">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    ¿Proporcionan certificaciones oficiales?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Sí, todos nuestros cursos incluyen certificados de finalización, y muchos de ellos están diseñados específicamente para prepararte para certificaciones reconocidas en la industria como CompTIA, AWS, Microsoft, Oracle, PMI y otras.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 shadow-sm">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    ¿Ofrecen bolsa de trabajo para egresados?
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Contamos con un departamento de bolsa de trabajo que conecta a nuestros estudiantes con más de 500 empresas colaboradoras. Además, ofrecemos talleres de preparación para entrevistas, asesoría para la elaboración de CV y ferias de empleo exclusivas para nuestros estudiantes y egresados.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-4">
+                        <p>¿No encuentras respuesta a tu pregunta?</p>
+                        <a href="#" class="btn btn-outline-primary">Ver más preguntas frecuentes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="fw-bold text-center mb-5">Síguenos en redes sociales</h2>
+            <div class="row g-4 justify-content-center text-center">
+                <div class="col-lg-2 col-md-4 col-6">
+                    <a href="#" class="social-media-link">
+                        <div class="card border-0 hover-shadow py-4">
+                            <div class="card-body">
+                                <i class="bi bi-facebook text-primary social-icon mb-3"></i>
+                                <h5>Facebook</h5>
+                                <p class="text-muted mb-0 small">@SkillsEngineer</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <a href="#" class="social-media-link">
+                        <div class="card border-0 hover-shadow py-4">
+                            <div class="card-body">
+                                <i class="bi bi-twitter text-primary social-icon mb-3"></i>
+                                <h5>Twitter</h5>
+                                <p class="text-muted mb-0 small">@SkillsEng</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <a href="#" class="social-media-link">
+                        <div class="card border-0 hover-shadow py-4">
+                            <div class="card-body">
+                                <i class="bi bi-instagram text-primary social-icon mb-3"></i>
+                                <h5>Instagram</h5>
+                                <p class="text-muted mb-0 small">@SkillsEngineer</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <a href="#" class="social-media-link">
+                        <div class="card border-0 hover-shadow py-4">
+                            <div class="card-body">
+                                <i class="bi bi-linkedin text-primary social-icon mb-3"></i>
+                                <h5>LinkedIn</h5>
+                                <p class="text-muted mb-0 small">Skill's Engineer</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <a href="#" class="social-media-link">
+                        <div class="card border-0 hover-shadow py-4">
+                            <div class="card-body">
+                                <i class="bi bi-youtube text-primary social-icon mb-3"></i>
+                                <h5>YouTube</h5>
+                                <p class="text-muted mb-0 small">Skill's Engineer</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-4">Suscríbete a nuestro newsletter</h2>
+            <p class="lead mb-4 mx-auto" style="max-width: 700px;">Recibe información sobre nuevos cursos, eventos especiales, webinars gratuitos y contenido exclusivo directamente en tu bandeja de entrada.</p>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form class="newsletter-form">
+                        <div class="input-group input-group-lg">
+                            <input type="email" class="form-control" placeholder="Tu correo electrónico">
+                            <button class="btn btn-light" type="submit">Suscribirme</button>
+                        </div>
+                    </form>
+                    <div class="form-text text-white-50 mt-2">No compartimos tu información con terceros. Puedes darte de baja en cualquier momento.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="mb-4"><span class="fw-bold">Skill's</span> Engineer</h5>
+                    <p class="mb-3">Una iniciativa de la Escuela de Ingeniería de la modalidad a distancia, formando profesionales en tecnología con los conocimientos más actualizados y relevantes para el mercado laboral actual.</p>
+                    <p class="fw-bold mb-3">Proyecto oficial de la <strong>Escuela de Ingeniería de la Universidad Continental</strong> - Modalidad a distancia, disponible para todos los estudiantes universitarios.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white me-2"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="mb-4">Enlaces rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white text-decoration-none">Inicio</a></li>
+                        <li class="mb-2"><a href="cursos.html" class="text-white text-decoration-none">Cursos</a></li>
+                        <li class="mb-2"><a href="nosotros.html" class="text-white text-decoration-none">Nosotros</a></li>
+                        <li class="mb-2"><a href="contacto.html" class="text-white text-decoration-none">Contacto</a></li>
+                        <li><a href="blog.html" class="text-white text-decoration-none">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="mb-4">Áreas</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="ciberseguridad.html" class="text-white text-decoration-none">Ciberseguridad</a></li>
+                        <li class="mb-2"><a href="bases-datos.html" class="text-white text-decoration-none">Bases de Datos</a></li>
+                        <li class="mb-2"><a href="programacion.html" class="text-white text-decoration-none">Programación</a></li>
+                        <li><a href="gestion-ti.html" class="text-white text-decoration-none">Gestión de TI</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="mb-4">Contacto</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-geo-alt me-2"></i> Campus Universitario, Edificio de Tecnología</li>
+                        <li class="mb-2"><i class="bi bi-envelope me-2"></i> contacto@skillsengineer.edu</li>
+                        <li class="mb-2"><i class="bi bi-telephone me-2"></i> +123 456 7890</li>
+                        <li><i class="bi bi-clock me-2"></i> Lun - Vie: 8:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2023 <span class="fw-bold">Skill's Engineer</span>. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="btn btn-primary back-to-top" role="button"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Librerías de animación y efectos -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.3/smooth-scroll.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+    
+    <!-- Scripts personalizados -->
+    <script src="js/script.js"></script>
+    <script src="js/professional.js"></script>
+
+    <!-- Custom CSS for this page -->
+    <style>
+        .contact-banner {
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            padding: 100px 0;
+        }
+        .contact-banner:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+        }
+        .contact-content {
+            position: relative;
+            z-index: 1;
+        }
+        .contact-icon {
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .social-icon {
+            font-size: 2.5rem;
+        }
+        .social-media-link {
+            text-decoration: none;
+            color: inherit;
+        }
+        .hover-shadow {
+            transition: all 0.3s ease;
+        }
+        .hover-shadow:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+        }
+    </style>
+</body>
+</html> 
